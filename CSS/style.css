@@ -50,6 +50,7 @@ margin-right: 0.5rem;
     color: #83764C; 
     display: flex;
     margin-right: 4rem;
+    font-size: 1.5rem;
 }
 
 .form-control {
@@ -65,29 +66,31 @@ margin-right: 0.5rem;
     color: #83764C;
 }
 
-.material-icons{ /*icono de la lupita y el shopping car*/
-    width: 1.5rem;
-    height: 1.5rem;
+/*icono de la lupita */
+i.fa-solid{
+    padding-top: 1rem;
+    font-size: 2rem;
     color:#83764C;
 }
 
-.search{ /*icono de la lupita*/
+
+.search{ /*search*/
     margin-top: 1.4rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     margin-left: 0;
 }
 
+/*icono de la lupita */
+.fa-cart-shopping{
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color:#83764C;
+}
 
 
 /*Imagenes de personas*/
 
-/* .person {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 280px;
-} */
 .container {
     border-radius: 50%;
     height: 312px;
@@ -144,16 +147,6 @@ margin-right: 0.5rem;
     width: 340px;  /*340px*/
 
 }
-/* .img2 {
-    left: -46px;
-    top: 174px;
-    width: 444px;
-}
-.img3 {
-    left: -16px;
-    top: 144px;
-    width: 466px;
-}  */
 
 .divider {
     background-color: #ca6060;
@@ -220,9 +213,43 @@ margin-right: 0.5rem;
 
 }
 
-#footer{
-    color: #ca6060;
+
+/*Necesario para que toda la estructura del footer funcione*/
+#footer, .icons, .FAQ, .gran{
+    background-color: #8A2F2E;
+    height: 9rem;
+    margin: 0;
+    
 }
-#footer .nav-item :hover{
-    color: #ae5543;
+
+.fa-brands:hover, .FAQ:hover{
+    color: #0f0f10;
+}
+.granBazar{/*color de @2023ElGranBazar*/
+    color: #F7BB75;
+}
+
+.fa-brands{/*color y espacio de icons*/
+    color: #F7BB75;
+    margin: 1rem;
+}
+
+.footer{ /*color y espacio de FAQ*/
+    color: #F7BB75;
+    margin: 0.2rem;
+}
+
+.navbar>.icons{
+    justify-content:center; /*left?*/
+    font-size: 2.5rem;
+}
+
+.navbar>.FAQ{
+    justify-content:none;
+    font-size: 1.5rem;
+}
+.navbar>.gran{/*direccion del container de @2023ElGranBazar y */
+    justify-content:center;
+    font-size: 1rem;
+    padding-right: 1rem;
 }
