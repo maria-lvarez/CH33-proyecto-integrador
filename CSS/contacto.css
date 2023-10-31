@@ -12,6 +12,10 @@ html{font-size: 16px;};
 
 
 /*navbar*/
+.navbar-nav > li > a {
+    color: #83764C;
+}
+
 
 
 nav{
@@ -21,7 +25,7 @@ nav{
 .container-fluid{ 
     /* background-color: blueviolet; */
     background-color: white;
-    display: flexbox;
+    display: flex;
     flex-direction: row;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -100,6 +104,10 @@ i.fa-solid{
     border-color:#8A2F2E;
 }
 
+.btns {
+    margin-left: 5.3rem;
+}
+
 /*Cajitas*/
 #exampleFormControlInput1 {
     border-color:#8A2F2E;
@@ -139,42 +147,27 @@ label {
     -webkit-text-stroke: 2px #F7BB75;
 }
 
+/*Container fluid del footer*/
+.container-fluid2 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.container-fluid3 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.container-fluid4 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
 /*Necesario para que toda la estructura del footer funcione*/
-#footer, .icons, .FAQ, .gran{
-    background-color: #8A2F2E;
-    height: 9rem;
-    margin: 0;
-    
-}
-
-.fa-brands:hover, .FAQ:hover{
-    color: #0f0f10;
-}
-.granBazar{/*color de @2023ElGranBazar*/
-    color: #F7BB75;
-}
-
-.fa-brands{/*color y espacio de icons*/
-    color: #F7BB75;
-    margin: 1rem;
-}
-
-.footer{ /*color y espacio de FAQ*/
-    color: #F7BB75;
-    margin: 0.2rem;
-}
-
-.navbar>.icons{
-    justify-content:center; /*left?*/
-    font-size: 2.5rem;
-}
-
-.navbar>.FAQ{
-    justify-content:none;
-    font-size: 1.5rem;
-}
-.navbar>.gran{/*direccion del container de @2023ElGranBazar y */
-    justify-content:center;
-    font-size: 1rem;
-    padding-right: 1rem;
-}

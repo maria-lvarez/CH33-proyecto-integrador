@@ -21,7 +21,7 @@
 </head>
   <body>
     <header> 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,8 +30,8 @@
                 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li> <a class="nav-link" href="#">Home</a> </li>
-                    <li> <a class="nav-link" aria-current="page" href="#">Nosotros</a> </li>
-                    <li> <a class="nav-link" href="#">Contacto</a> </li>              
+                    <li> <a class="nav-link" aria-current="page" href="./nosotras.html">Nosotros</a> </li>
+                    <li> <a class="nav-link" href="./contacto.html">Contacto</a> </li>              
                 </ul>
             </div>
                 <div>  
@@ -56,7 +56,7 @@
     <p><strong>Contacto</strong></p>
 </div>
 
-<section class="container-fluid p-4">
+<section class="container-fluid1 p-4">
     <div class="alert alert-danger fade show" style="display:none;"
                                              role="alert" id="alertValidaciones">
                <p id="alertValidacionesTexto"></p>
@@ -89,26 +89,34 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
       </div>
     
-
-      <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
-      
-      <button id="btnClear" class="btn btn-primary btn-block" type="button" id="btnClear">Limpiar todo</button>
+      <div class="btns">
+        <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+        
+        <button id="btnClear" class="btn btn-primary btn-block" type="button" id="btnClear">Limpiar todo</button>
+        </div>
     </section>
 
-      <footer id="footer" class="navbar navbar-expand-lg bg-body-tertiary" >
-        <div class="icons container-fluid">
-            <a  href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a  href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a  href="#"> <i class="fa-brands fa-instagram"></i> </a>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contacto</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Avisos de privacidad</a></li>
+        </ul>
+
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
         </div>
-        <div class="FAQ container-fluid">
-            <a href="#" class="footer nav-link">Contáctanos</a>
-            <a href="#" class="footer nav-link">FAQs</a>
-            <a href="#" class="footer nav-link">Avisos de privacidad</a>
-        </div>
-        <div class="gran container-fluid">
-            <p class="granBazar">@2023 El Gran Bazar</p>
-        </div>
+    
+        
     </footer>
 
     <script src="./JS/contacto.js"></script>
