@@ -44,19 +44,19 @@ margin-right: 0.5rem;
 }
 
 #LogoPrincipal{
-    
+    margin-left: 0rem; 
     width: 22rem;
     height: 10rem;
 }
 
-.nav-link{
+a.nav-link{
     color: #83764C; 
     display: flex;
     margin-right: 4rem;
     font-size: 1.5rem;
 }
 
-.form-control {
+input.form-control.me-2{
     border-color:#83764C;
     margin-top: 1rem;
     margin-right: 0;
@@ -179,11 +179,13 @@ label {
     
 }
 
-.fa-brands:hover, .FAQ:hover{
+.fa-brands:hover,a.footer:hover{
     color: #0f0f10;
 }
 .granBazar{/*color de @2023ElGranBazar*/
+    display: flex;
     color: #F7BB75;
+    float: right;
 }
 
 .fa-brands{/*color y espacio de icons*/
@@ -193,10 +195,10 @@ label {
 
 footer a {
     color: #F7BB75;
+    text-decoration: none;
 }
 
-.footer{ /*color y espacio de FAQ*/
-    
+.footer{ /*color y espacio de FAQ*/ 
     margin: 0.2rem;
 }
 
@@ -210,7 +212,6 @@ footer a {
     font-size: 1.5rem;
 }
 .navbar>.gran{/*direccion del container de @2023ElGranBazar y */
-    justify-content:center;
     font-size: 1rem;
     padding-right: 1rem;
 }
