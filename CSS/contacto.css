@@ -87,6 +87,58 @@ i.fa-solid{
     color:#83764C;
 }
 
+/*Botones Enviar y Limpiar Todo*/
+#btnEnviar {
+    background-color: #8A2F2E;
+    color: #F7BB75; 
+    border-color:#8A2F2E;
+}
+
+#btnClear {
+    background-color: #8A2F2E;
+    color: #F7BB75; 
+    border-color:#8A2F2E;
+}
+
+/*Cajitas*/
+#exampleFormControlInput1 {
+    border-color:#8A2F2E;
+    height: 4rem;
+}
+
+#exampleFormControlInput2 {
+    border-color:#8A2F2E;
+    height: 4rem;
+}
+
+#exampleFormControlInput3 {
+    border-color:#8A2F2E;
+    height: 4rem;
+}
+
+#exampleFormControlTextarea1 {
+    border-color:#8A2F2E;
+    height: 12rem;
+}
+
+::placeholder {
+    font-size: 1.2rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+/*Banner*/
+#banner {
+    background-image: url("https://www.marthastewart.com/thmb/ApxWW7wyoRUEV39Es7kWs6WkMdo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/trinket-boxes-collections-print-e1582515931823-e47330b5822d490b99efe0c98b77ebbd.jpg");
+    width: 100%;
+    height: 8rem;
+    font-size: 3rem;
+    text-align: center;
+    -webkit-text-stroke: 2px #F7BB75;
+}
+
 /*Necesario para que toda la estructura del footer funcione*/
 #footer, .icons, .FAQ, .gran{
     background-color: #8A2F2E;
