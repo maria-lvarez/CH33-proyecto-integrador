@@ -212,6 +212,9 @@ i.fa-solid{
 }
 
 
+<<<<<<< HEAD:CSS/style.css
+
+=======
 /*Necesario para que toda la estructura del footer funcione*/
 #footer, .icons, .FAQ, .gran{
     background-color: #8A2F2E;
@@ -251,3 +254,4 @@ i.fa-solid{
     font-size: 1rem;
     padding-right: 1rem;
 }
+>>>>>>> 93055c9153156ca285f3c9818f5dfb3eaff717cd:CSS/nosotras.css
