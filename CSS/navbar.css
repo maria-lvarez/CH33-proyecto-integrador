@@ -5,7 +5,7 @@ nav{
     height:10rem;
 }
 
-.container-fluid{ 
+#container-nav{ 
     /* background-color: blueviolet; */
     background-color: white;
     display: flexbox;
@@ -14,17 +14,17 @@ nav{
     margin-right: 0.5rem;
 } 
 
-.navbar-collapse {
+#navbarTogglerDemo01{
     /* background-color: aqua; */
     flex-basis: 100%;
     flex-grow: 0.2;
     align-items: center;
 }
 
-#span-img{
+/* #span-img{
 margin-left: 0.5rem;
 margin-right: 0.5rem;
-}
+}  */
 
 #LogoPrincipal{
     
@@ -68,7 +68,7 @@ i.fa-solid{
 }
 
 /*icono de la lupita */
-.fa-cart-shopping{
+.carrito{
     padding-bottom: 1rem;
     font-size: 2rem;
     color:#83764C;

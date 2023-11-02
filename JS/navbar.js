@@ -63,8 +63,6 @@ divContainer1.insertAdjacentHTML("beforeend",` <div class="container-fluid d-fle
 <img src="/src/images/LogoSinFondo1.png" alt="" width="362px" height="150px">
 </div>`);
 
-
-
 //a
 /* let a1 = document.createElement("a");
 a1.className = "nav-link";
@@ -81,11 +79,11 @@ divContainer1.insertAdjacentHTML("beforeend",`
 
   <li class="list-group-item border-light"><form class="d-flex" role="search">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-  <i class="bi bi-search"></i>                
+  <i class="bi bi-search" id="busqueda"></i>                
   </form></li>
 
   <li class="list-group-item border-light">        <span class="material-icons shopping">
-        <i class="bi bi-cart-fill"></i>
+        <i class="bi bi-cart-fill" id="carrito"></i>
         </span>
         </li>
 </ul>
