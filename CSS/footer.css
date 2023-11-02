@@ -10,13 +10,10 @@
 
 html{font-size: 16px;};
 
-
 /*navbar*/
 .navbar-nav > li > a {
     color: #83764C;
 }
-
-
 
 nav{
     height:10rem;
@@ -69,8 +66,8 @@ input.form-control.me-2{
     color: #83764C;
 }
 
-/*icono de la lupita */
-i.fa-solid{
+/*icono del carrito */
+.bi-cart-fill{
     padding-top: 1rem;
     font-size: 2rem;
     color:#83764C;
@@ -85,8 +82,8 @@ i.fa-solid{
 }
 
 /*icono de la lupita */
-.fa-cart-shopping{
-    padding-bottom: 1rem;
+.bi-search{
+    margin-top: 0.35rem;
     font-size: 2rem;
     color:#83764C;
 }
@@ -171,39 +168,32 @@ label {
 
 
 /*Necesario para que toda la estructura del footer funcione*/
-/*Necesario para que toda la estructura del footer funcione*/
 #footer, .icons, .FAQ, .gran{
     background-color: #8A2F2E;
     height: 9rem;
     margin: 0;
-    
 }
 
-.fa-brands:hover,a.footer:hover{
+.fa-brands:hover, .FAQ:hover{
     color: #0f0f10;
 }
 .granBazar{/*color de @2023ElGranBazar*/
-    display: flex;
     color: #F7BB75;
-    float: right;
 }
 
-.fa-brands{/*color y espacio de icons*/
+.bi{/*color y espacio de icons*/
     color: #F7BB75;
     margin: 1rem;
 }
 
-footer a {
+.FAQ a{ /*color y espacio de FAQ*/
     color: #F7BB75;
+    margin: 0.2rem;
     text-decoration: none;
 }
 
-.footer{ /*color y espacio de FAQ*/ 
-    margin: 0.2rem;
-}
-
 .navbar>.icons{
-    justify-content:center; /*left?*/
+    justify-content:start; /*left?*/
     font-size: 2.5rem;
 }
 
@@ -212,6 +202,8 @@ footer a {
     font-size: 1.5rem;
 }
 .navbar>.gran{/*direccion del container de @2023ElGranBazar y */
+    justify-content:right;
+    align-items: flex-end;
     font-size: 1rem;
     padding-right: 1rem;
 }

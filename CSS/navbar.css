@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+CSS
 
 *{
     margin: 0;
@@ -52,8 +52,17 @@ margin-right: 0.5rem;
 a.nav-link{
     color: #83764C; 
     display: flex;
-    margin-right: 4rem;
+    margin-right: rem;
     font-size: 1.5rem;
+    display: block;
+}
+
+a.nav-link1{
+    color: #83764C; 
+    font-size: 1.5rem;
+    text-decoration: none;
+    white-space: nowrap;
+    
 }
 
 input.form-control.me-2{
@@ -69,10 +78,17 @@ input.form-control.me-2{
     color: #83764C;
 }
 
-/*icono de la lupita */
-i.fa-solid{
+/*div container1*/
+.container1{
+    display: inline-block;
+    
+}
+
+/*icono del carrito */
+.bi-cart-fill{
     padding-top: 1rem;
     font-size: 2rem;
+    margin-left: 2rem;
     color:#83764C;
 }
 
@@ -85,8 +101,8 @@ i.fa-solid{
 }
 
 /*icono de la lupita */
-.fa-cart-shopping{
-    padding-bottom: 1rem;
+.bi-search{
+    margin-top: 0.35rem;
     font-size: 2rem;
     color:#83764C;
 }
@@ -171,7 +187,6 @@ label {
 
 
 /*Necesario para que toda la estructura del footer funcione*/
-/*Necesario para que toda la estructura del footer funcione*/
 #footer, .icons, .FAQ, .gran{
     background-color: #8A2F2E;
     height: 9rem;
@@ -179,13 +194,11 @@ label {
     
 }
 
-.fa-brands:hover,a.footer:hover{
+.fa-brands:hover, .FAQ:hover{
     color: #0f0f10;
 }
 .granBazar{/*color de @2023ElGranBazar*/
-    display: flex;
     color: #F7BB75;
-    float: right;
 }
 
 .fa-brands{/*color y espacio de icons*/
@@ -193,12 +206,8 @@ label {
     margin: 1rem;
 }
 
-footer a {
+.footer{ /*color y espacio de FAQ*/
     color: #F7BB75;
-    text-decoration: none;
-}
-
-.footer{ /*color y espacio de FAQ*/ 
     margin: 0.2rem;
 }
 
@@ -212,6 +221,7 @@ footer a {
     font-size: 1.5rem;
 }
 .navbar>.gran{/*direccion del container de @2023ElGranBazar y */
+    justify-content:center;
     font-size: 1rem;
     padding-right: 1rem;
 }
