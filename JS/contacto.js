@@ -36,10 +36,10 @@ function validarEmail() {
 function validarEnvio(){
     let response = emailjs.send;
     if (response==console.assert('SUCCESS!', response.status, response.text)){
-        return false;
+        return true;
     }
     else{
-        return true;
+        return false;
     }
 
 }

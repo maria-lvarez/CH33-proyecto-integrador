@@ -1,12 +1,12 @@
 let nav = document.getElementsByTagName("nav").item(0);
 
 //div container
-let divContainer = document.createElement("div");
-divContainer.className = "container-fluid";
-nav.prepend(divContainer);
+let divContainer1 = document.createElement("div");
+divContainer1.className = "container-fluid";
+nav.prepend(divContainer1);
 
 //button
-divContainer.insertAdjacentHTML("afterbegin", `<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+divContainer1.insertAdjacentHTML("afterbegin", `<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>`);
 
@@ -15,7 +15,7 @@ let div1 = document.createElement("div");
 div1.classList.add("collapse");
 div1.classList.add("navbar-collapse");
 div1.id = "navbarTogglerDemo01";
-divContainer.insertAdjacentElement("beforeend",div1);
+divContainer1.insertAdjacentElement("beforeend",div1);
 
 //ul
 let ul1 = document.createElement("ul");
@@ -59,7 +59,7 @@ a3.innerText = "Contacto";
 li3.prepend(a3);
 
 //div2 img
-divContainer.insertAdjacentHTML("beforeend",` <div class="container-fluid d-flex justify-content-center">
+divContainer1.insertAdjacentHTML("beforeend",` <div class="container-fluid d-flex justify-content-center">
 <img src="/src/images/LogoSinFondo1.png" alt="" width="362px" height="150px">
 </div>`);
 
@@ -75,7 +75,7 @@ divContainer.append(ul1); */
 `);*/
 
 //form
-divContainer.insertAdjacentHTML("beforeend",`
+divContainer1.insertAdjacentHTML("beforeend",`
 <ul class="list-group list-group-horizontal  d-flex align-items-center">
   <li class="list-group-item border-light"><a class="nav-link1" href="#">Log in</a></li>
 
