@@ -14,7 +14,7 @@ footer.append(divContainer2);//contenedor fluido
 //icon whatsApp
 let a4 = document.createElement("a");
 a4.href="#";
-divContainer2.append(a1);
+divContainer2.append(a4);
 
 let i1 = document.createElement("i");
 i1.classList.add("bi");
@@ -24,7 +24,7 @@ a4.append(i1);
 //icon facebook
 let a5 = document.createElement("a");
 a5.href="#";
-divContainer2.append(a2);
+divContainer2.append(a5);
 
 let i2 = document.createElement("i");
 i2.classList.add("bi");
