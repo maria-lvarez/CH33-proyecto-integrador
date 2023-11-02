@@ -3,6 +3,7 @@
 let txtNombre = document.getElementById("exampleFormControlInput1");
 let btnEnviar = document.getElementById("btnEnviar");
 let alertValidaciones = document.getElementById("alertValidaciones");
+let alertValidaciones1=document.getElementById("alertValidaciones1");
 let txtEmail = document.getElementById("exampleFormControlInput2");
 let txtNumber = document.getElementById("exampleFormControlInput3")
 let txtMensaje = document.getElementById("exampleFormControlTextarea1");
@@ -31,6 +32,17 @@ function validarEmail() {
         return false;
     }
 }//validarEmail
+
+function validarEnvio(){
+    let response = emailjs.send;
+    if (response==console.assert('SUCCESS!', response.status, response.text)){
+        return false;
+    }
+    else{
+        return true;
+    }
+
+}
  
 btnEnviar.addEventListener("click", function(event){
 
@@ -62,23 +74,34 @@ btnEnviar.addEventListener("click", function(event){
     if(! validarEmail()){
         alertValidaciones.innerHTML+="El campo <strong>Email</strong> es requerido <br/>";
         alertValidaciones.style.display="block";
-        txtNumber.style.border="solid thin red";
+        txtEmail.style.border="solid thin red";
         isValid = false;
     }//If ! validarTeléfono
 
     if(txtMensaje.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         alertValidaciones.innerHTML+="El campo <strong> Mensaje </strong> es requerido <br/> ";
         alertValidaciones.style.display="block"; //block o inline para que lo muestre
-        txtNombre.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
+        txtMensaje.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
         isValid = false;
-    }//ValidarMensaje
+    }//validar mensaje
 
-    txtNombre.value = ""; 
-    txtNumber.value = "";
-    txtEmail.value = "";
-    txtMensaje.value = "";
-    txtNombre.focus();
+    if(! validarEnvio()){
+       alertValidaciones.innerHTML+= "<strong>ERROR</strong> eL mensaje no ha sido enviado, prueba de nuevo <br/> ";
+       alertValidaciones.style.display="block"; //block o inline para que lo muestre
+       txtMensaje.style.border="solid thin red";
+       isValid = false;
+    }//Validar si se envio
+    else{
+        alertValidaciones1.innerHTML+="¡El <strong>mensaje</strong> ha sido enviado correctamente!";
+        alertValidaciones1.style.display="block";
+        isValid = true;
+    }
 
+   // txtNombre.value = ""; 
+    //txtNumber.value = "";
+    //txtEmail.value = "";
+   // txtMensaje.value = "";
+   // txtNombre.focus();
 
     var templateParams = {
         name: txtNombre.value,
