@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Crear los elementos del navbar
         var header = document.createElement('header');
         var nav = document.createElement('nav');
-        nav.className = 'navbar navbar-expand-lg bg-body-tertiary';
+        nav.className = 'navbar navbar-expand-md';
         nav.innerHTML = `
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li><a class="nav-link" href="#">Home</a></li>
+                        <li><a class="nav-link" href="./index.html">Home</a></li>
                         <li><a class="nav-link" aria-current="page" href="./nosotras.html">Nosotros</a></li>
                         <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
                     </ul>
