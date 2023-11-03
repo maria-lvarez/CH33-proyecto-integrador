@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div>  
                     <img id="LogoPrincipal" src="./src/images/LogoSinFondo1.png"> 
                 </div>
-                <a class="nav-link" href="#">Log in</a>
+                <a class="nav-link" href="./login.html">Log in</a>
                 <form class="d-flex justify-content-between" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
