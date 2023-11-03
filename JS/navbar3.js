@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><a class="nav-link" href="#">Home</a></li>
                         <li><a class="nav-link" aria-current="page" href="./nosotras.html">Nosotros</a></li>
                         <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        <li><a class="nav-link" href="./contacto.html">Categorias</a></li>
                     </ul>
                 </div>
                 <div>  
