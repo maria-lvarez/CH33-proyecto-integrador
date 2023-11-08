@@ -5,17 +5,19 @@ nav{
     height:10rem;
 }
 
+
+
 .container-fluid{ 
     /* background-color: blueviolet; */
-    background-color: white;
-    display: flexbox;
-    flex-direction: row;
+    background-color: white;}
+    /*display: flexbox;*/
+    /*flex-direction: row;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 } 
 
 .navbar-collapse {
-    /* background-color: aqua; */
+    /* background-color: aqua; 
     flex-basis: 100%;
     flex-grow: 0.2;
     align-items: center;
@@ -30,12 +32,12 @@ margin-right: 0.5rem;
     
     width: 22rem;
     height: 10rem;
-}
+}*/
 
 .nav-link{
     color: #83764C; 
     display: flex;
-    margin-right: 4rem;
+    margin-right: 10px;
     font-size: 1.5rem;
 }
 
@@ -73,3 +75,4 @@ i.fa-solid{
     font-size: 2rem;
     color:#83764C;
 }
+

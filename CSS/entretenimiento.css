@@ -28,6 +28,14 @@
 }
 
 /*botones*/
-.btn btn-primary{
-    border-color: #5E1F28; 
+#btnCarritoCard{
+    border-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #5E1F28;
+}
+
+#btnComprarCard{
+    background-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #fff;
 }
