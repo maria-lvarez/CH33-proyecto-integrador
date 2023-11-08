@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categoria 1</title>
+    <title>Ropa y accesorios</title>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="./src/images/LogoSinFondo2.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./CSS/navbar.css">
      <!--CSS Footer-->
      <link rel="stylesheet" href="./CSS/footer.css">
+<!--CSS ropayaccesorios-->
+<link rel="stylesheet" href="./CSS/ropayaccesorios.css">
 
 </head>
 <body>
@@ -27,11 +29,53 @@
             <nav id="navbar" class="navbar navbar-expand-md"></nav>
     </header>
 
+<!--Banner-->
+  <div class="banner-img">
+    <p>Ropa y accesorios</p>
+  </div>
     
-      <div class="hola">
-        <h1>Ropa y accesorios</h1>
-      </div>
-        
+<!--Cards-->
+<div class="container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <div class="card" style="width: 18rem; border: none;">
+    <img src="./src/images/cardigan.jpg" class="card-img-top" height="300rem" alt="...">
+    <div class="card-body">
+    <hr>
+      <h5 class="card-title">Cárdigan</h5>
+      <p class="card-text">Tejido beige</p>
+      <p class="card-text">$310.00</p>
+    <div class="btn-group row g-2">
+      <a href="#" class="btn btn-primary">Añadir al carrito</a>
+      <a href="#" class="btn btn-secondary">Comprar</a>
+    </div>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem; border: none;">
+    <img src="./src/images/pantalon.jpg" class="card-img-top" height="300rem" alt="...">
+    <div class="card-body">
+    <hr>
+      <h5 class="card-title">Pantalón de mezclilla</h5>
+      <p class="card-text">Azul estampado</p>
+      <p class="card-text">$400.00</p>
+    <div class="btn-group row g-2">
+      <a href="#" class="btn btn-primary">Añadir al carrito</a>
+      <a href="#" class="btn btn-secondary">Comprar</a>
+    </div>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem; border: none;">
+    <img src="./src/images/Maleta.jpg" class="card-img-top" height="300rem" alt="...">
+    <div class="card-body">
+    <hr>
+      <h5 class="card-title">Portafolio</h5>
+      <p class="card-text">Cuero vegano</p>
+      <p class="card-text">$315.00</p>
+    <div class="btn-group row g-2">
+      <a href="#" class="btn btn-primary">Añadir al carrito</a>
+      <a href="#" class="btn btn-secondary">Comprar</a>
+    </div>
+    </div>
+  </div>      
+</div>
 
 
     <footer id="footer" class="navbar navbar-expand-md"></footer>

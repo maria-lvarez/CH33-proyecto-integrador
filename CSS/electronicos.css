@@ -1,0 +1,30 @@
+/*banner*/
+.banner-img{
+    background-image: url(https://img.freepik.com/fotos-premium/viejo-televisor-vintage-sobre-mesa_905502-164.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*texto del banner*/
+.banner-img p{
+    font-size: 3rem;
+}
+
+.container{
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+
+/*botones*/
