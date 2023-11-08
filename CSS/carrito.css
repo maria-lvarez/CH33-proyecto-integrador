@@ -1,0 +1,53 @@
+
+/* Estilos para la imagen del producto */
+.product-image {
+    width: 50px; /* O el tamaño que prefieras */
+    height: auto;
+}
+
+.boton-fin-comp {
+    background-color: #83764C;
+    color: white;
+}
+
+
+/* CSS para ajustar el cuerpo de la página para que no se solape con el footer */
+
+/* CSS para los botones 'Agregar' y 'Finalizar compra' */
+.boton-add-cupn  {
+    background-color: #AE5543; /* remplaza con el color de tus botones */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10; /* Esto hace que los bordes sean rectos */
+}
+
+/* CSS para alinear el botón 'Agregar' al lado del input */
+#promo-code-form {
+    display: flex;
+    align-items: center;
+}
+
+#promo-code-form input {
+    margin-right: 10px; /* Asegura un espacio entre el input y el botón */
+}
+
+/* Asegúrate de que el contenedor del resumen del carrito tenga suficiente espacio */
+#cart-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Esto añade espacio alrededor de los elementos internos */
+}
+.container {
+    position: relative;
+    min-height: 100vh; 
+    padding-bottom: 60px; 
+    min-height: 100vh; 
+}
