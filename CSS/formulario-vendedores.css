@@ -3,14 +3,14 @@
  }
  /*estilos banner*/
  #bannerimg{
-     background-image: url("src\images\Antiques.jpg");
+     background-image: url("../src/images/Antiques.jpg");
      height: 8rem;
      background-size: cover;
      display: flex;
      justify-content: center;
      align-items: center;
-     color: white;
  }
+
  #banner-p{
      font-size: 3rem;
      color: black;
@@ -71,11 +71,13 @@
  img.img-fondo{
      display: block;
      filter:  brightness(50%) blur(.08rem);
+     height: 20rem;
  }
  
  img-fondo{
      position: relative;
      text-align: center;
+    
  }
  .p-container{
      position: relative;
