@@ -1,0 +1,30 @@
+/*banner*/
+.banner-img{
+    background-image: url(https://www.roca.es/rocalife/wp-content/uploads/2021/12/cocinas-vintage-muebles-cocina-madera-roca_900x505_acf_cropped@2x.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*texto del banner*/
+.banner-img p{
+    font-size: 3rem;
+}
+
+.container{
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+
+/*botones*/

@@ -20,14 +20,7 @@ nav{
     height:10rem;
 }
 
-.container-fluid{ 
-    /* background-color: blueviolet; */
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-} 
+
 
 .navbar-collapse {
     /* background-color: aqua; */

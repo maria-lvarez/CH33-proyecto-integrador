@@ -63,7 +63,7 @@ divFAQ.append(a7);
 //FAQs
 let a8 = document.createElement("a");
 a8.class ="footer";
-a8.href="#";
+a8.href="./FQA.html";
 a8.innerText = "FAQs";
 divFAQ.append(a8);
 
