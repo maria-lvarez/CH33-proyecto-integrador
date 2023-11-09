@@ -3,7 +3,7 @@
  }
  /*estilos banner*/
  #bannerimg{
-     background-image: url("Antiques.jpg");
+     background-image: url("src\images\Antiques.jpg");
      height: 8rem;
      background-size: cover;
      display: flex;
