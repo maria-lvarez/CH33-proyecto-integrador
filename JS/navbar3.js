@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var header = document.createElement('header');
         var nav = document.createElement('nav');
 <<<<<<< HEAD
+<<<<<<< HEAD
         nav.className.add = 'navbar navbar-expand-lg';
         nav.innerHTML = `
             <div class="container-fluid" id="container-nav">
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
 =======
         nav.className = 'navbar navbar-expand-md';
         nav.innerHTML = `
+=======
+        nav.className = 'navbar navbar-expand-md';
+        nav.innerHTML = `
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
            <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img class="img-fluid" src="./src/images/LogoSinFondo1.png" alt="" width="300"></a>
@@ -47,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
     </nav>
+<<<<<<< HEAD
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
+=======
 >>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
         `;
 //div collapse navbar

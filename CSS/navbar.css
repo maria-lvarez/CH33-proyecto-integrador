@@ -6,8 +6,11 @@ nav{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #container-nav{ 
 =======
+=======
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
 
 
 .container-fluid{ 
@@ -21,8 +24,13 @@ nav{
 } 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #navbarTogglerDemo01{
     /* background-color: aqua; */
+=======
+.navbar-collapse {
+    /* background-color: aqua; 
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
 =======
 .navbar-collapse {
     /* background-color: aqua; 
