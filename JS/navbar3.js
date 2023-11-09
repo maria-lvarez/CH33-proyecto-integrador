@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a class="nav-link" href="./login.html">Log in</a>
                 <form class="d-flex justify-content-between" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <i class="bi bi-search"></i>
+                    <i class="bi-search"></i>
                 </form>
                 <span class="material-icons shopping">
-                    <i class="bi bi-cart3"></i>
+                    <i class="bi-cart3"></i>
                 </span>
             </div>
         </div>

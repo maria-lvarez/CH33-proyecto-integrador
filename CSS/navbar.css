@@ -55,10 +55,11 @@ margin-right: 0.5rem;
 }
 
 /*icono de la lupita */
-i.fa-solid{
-    padding-top: 1rem;
+.bi-search{
     font-size: 2rem;
     color:#83764C;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -67,12 +68,14 @@ i.fa-solid{
     /* margin-right: 1rem; */
     /* margin-bottom: 1rem; */
     /* margin-left: 0; */
-/* } */ */
+/* } */ 
 
 /*icono de la lupita */
-.fa-cart-shopping{
+.bi-cart3{
     padding-bottom: 1rem;
     font-size: 2rem;
     color:#83764C;
+    margin: 1rem;
+
 }
 
