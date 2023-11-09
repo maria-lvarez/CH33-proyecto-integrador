@@ -1,7 +1,7 @@
 let arJson = [{'name':'Entre los rotos - Alaide Ventura', 'img':'./src/images/libro.jpg', 'type':'Libro', 'price':'$150.00'},
 {'name':'Teléfono antiguo', 'img':'./src/images/telefonoJuguete.jpg', 'type':'Juguete', 'price':'$100.00'},
 {'name':'Bohemian Rhapsody - Queen', 'img':'./src/images/lp.jpg', 'type':'LP', 'price':'$600.00'},
-{'name':'Tostador', 'img':'./src/images/electrodomesticos.jpg', 'type':'Vintage menta', 'price':'$520.00'},
+{'name':'Tostador', 'img':'./src/images/tostador.jpg', 'type':'Vintage menta', 'price':'$520.00'},
 {'name':'Máquina de café', 'img':'./src/images/maquinadecafe.jpg', 'type':'Retro rosa', 'price':'$1200.00'},
 {'name':'Batidora', 'img':'./src/images/batidora.jpeg', 'type':'Oster blanca', 'price':'$350.00'},
 {'name':'Teléfono fijo', 'img':'./src/images/telefono.jpg', 'type':'Retro azul', 'price':'$400.00'},
