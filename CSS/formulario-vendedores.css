@@ -1,0 +1,105 @@
+*{ margin: 0%;
+    padding: 0%;
+ }
+ /*estilos banner*/
+ #bannerimg{
+     background-image: url("../src/images/Antiques.jpg");
+     height: 8rem;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #banner-p{
+     font-size: 3rem;
+     color: black;
+     -webkit-text-stroke-width: 0.02rem;
+     -webkit-text-stroke-color: #F7BB75;
+ }
+ 
+ /*estilos de input*/
+ .titulo-form{
+     color: black;
+     -webkit-text-stroke-width: 0.02rem;
+     -webkit-text-stroke-color: #F7BB75;
+     text-align: center;
+ }
+ .formulario-bo{
+     border-color:#8A2F2E;
+ }
+ .acordion-cerrado{
+    background-color: #8A2F2E;
+    color:#F7BB75;
+ }
+ .acordion-cerrado:hover{
+     background-color: #8A2F2E;
+     color:#F7BB75;
+ }
+ /* este es el color del checkbox*/
+ .aviso-texto{
+     color:#83764C;
+ }
+ .cubito-text{
+     font-size: 0.8rem;
+ }
+ .cubito:checked{
+     background-color: #8A2F2E;
+     color: #F7BB75;
+     border-color: #8A2F2E;
+ }
+ .btn-enviar-der{
+     background-color: #8A2F2E;
+     border: #8A2F2E;
+     color: #F7BB75;
+     padding:0.5rem;
+     margin: 0.8rem;
+ }
+ .btn-enviar-der:hover{
+     background-color: #F7BB75;
+ }
+ 
+ .btn-enviar-izq{
+     background-color: #8A2F2E;
+     border: #8A2F2E;
+     color: #F7BB75; 
+ }
+ .btn-enviar-izq:hover{
+     background-color: #F7BB75;
+ }
+ /* estilos de imagenes de pie de pagina*/
+ img.img-fondo{
+     display: block;
+     filter:  brightness(50%) blur(.08rem);
+     height: 20rem;
+ }
+ 
+ img-fondo{
+     position: relative;
+     text-align: center;
+    
+ }
+ .p-container{
+     position: relative;
+     text-align: center;
+ }
+ /*esta es la posicion del texto dentro de la imagen de pie de pagina*/
+ .centered{
+     position: absolute;
+     top: 5rem;
+     left: 2rem;
+     color: white; 
+     font-size: 2rem;
+     -webkit-text-stroke-width: 0.06rem;
+     -webkit-text-stroke-color: #F7BB75;
+   }
+   .left2{
+     position: absolute;
+     bottom: 5rem;
+     right: 2rem;
+     color: white; 
+     font-size: 1.5rem;
+     text-align:end;
+     -webkit-text-stroke-width: 0.04rem;
+     -webkit-text-stroke-color:#F7BB75;
+   }

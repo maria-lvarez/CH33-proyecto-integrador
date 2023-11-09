@@ -5,9 +5,16 @@ nav{
     height:10rem;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+#container-nav{ 
+=======
+=======
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
 
 
 .container-fluid{ 
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
     /* background-color: blueviolet; */
     background-color: white;}
     /*display: flexbox;*/
@@ -16,17 +23,27 @@ nav{
     margin-right: 0.5rem;
 } 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+#navbarTogglerDemo01{
+    /* background-color: aqua; */
+=======
 .navbar-collapse {
     /* background-color: aqua; 
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
+=======
+.navbar-collapse {
+    /* background-color: aqua; 
+>>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
     flex-basis: 100%;
     flex-grow: 0.2;
     align-items: center;
 }
 
-#span-img{
+/* #span-img{
 margin-left: 0.5rem;
 margin-right: 0.5rem;
-}
+}  */
 
 #LogoPrincipal{
     
