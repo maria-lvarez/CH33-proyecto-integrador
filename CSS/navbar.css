@@ -5,87 +5,21 @@ nav{
     height:10rem;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-#container-nav{ 
-=======
-=======
->>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
-
-
-.container-fluid{ 
->>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
-    /* background-color: blueviolet; */
-    background-color: white;}
-    /*display: flexbox;*/
-    /*flex-direction: row;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-} 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-#navbarTogglerDemo01{
-    /* background-color: aqua; */
-=======
 .navbar-collapse {
-    /* background-color: aqua; 
->>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
-=======
-.navbar-collapse {
-    /* background-color: aqua; 
->>>>>>> 6f48d01e947c852115eb4b3fcbcab5361851ed21
+    /* background-color: aqua;*/
     flex-basis: 100%;
     flex-grow: 0.2;
     align-items: center;
 }
 
-/* #span-img{
-margin-left: 0.5rem;
-margin-right: 0.5rem;
-}  */
-
-#LogoPrincipal{
-    
-    width: 22rem;
-    height: 10rem;
-}*/
-
-.nav-link{
-    color: #83764C; 
-    display: flex;
-    margin-right: 4rem;
-    font-size: 0.5rem;
-}
-
-.form-control {
-    border-color:#83764C;
-    margin-top: 1rem;
-    margin-right: 0;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    width: 8rem;
-}
-
-.form-control::placeholder{
-    color: #83764C;
-}
 
 /*icono de la lupita */
-.bi-search{
+.bi-cart3{
     font-size: 2rem;
     color:#83764C;
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
-
-
-/* .search{ /*search*/
-    /* margin-top: 1.4rem; */
-    /* margin-right: 1rem; */
-    /* margin-bottom: 1rem; */
-    /* margin-left: 0; */
-/* } */ 
 
 /*icono de la lupita */
 .bi-cart3{
@@ -95,4 +29,3 @@ margin-right: 0.5rem;
     margin: 1rem;
 
 }
-
