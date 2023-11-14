@@ -1,45 +1,45 @@
 const footer = document.querySelector("footer");
 
 //Primer div
-let divContainer = document.createElement("div");
-divContainer.classList.add ("icons");
-divContainer.classList.add ("container-fluid");
-divContainer.classList.add ("col-sm-12");
-divContainer.classList.add ("col-md-3");
-divContainer.classList.add ("col-lg-3");
-footer.append(divContainer);//contenedor fluido
+let divContainer2 = document.createElement("div");
+divContainer2.classList.add ("icons");
+divContainer2.classList.add ("container-fluid");
+divContainer2.classList.add ("col-sm-12");
+divContainer2.classList.add ("col-md-3");
+divContainer2.classList.add ("col-lg-3");
+footer.append(divContainer2);//contenedor fluido
 
 //div icons
 
 //icon whatsApp
-let a1 = document.createElement("a");
-a1.href="#";
-divContainer.append(a1);
+let a4 = document.createElement("a");
+a4.href="#";
+divContainer2.append(a4);
 
 let i1 = document.createElement("i");
 i1.classList.add("bi");
 i1.classList.add("bi-whatsapp");
-a1.append(i1);
+a4.append(i1);
 
 //icon facebook
-let a2 = document.createElement("a");
-a2.href="#";
-divContainer.append(a2);
+let a5 = document.createElement("a");
+a5.href="#";
+divContainer2.append(a5);
 
 let i2 = document.createElement("i");
 i2.classList.add("bi");
 i2.classList.add("bi-facebook");
-a2.append(i2);
+a5.append(i2);
 
 //icon IG
-let a3 = document.createElement("a");
-a3.href="#";
-divContainer.append(a3);
+let a6 = document.createElement("a");
+a6.href="#";
+divContainer2.append(a6);
 
 let i3 = document.createElement("i");
 i3.classList.add("bi");
 i3.classList.add("bi-instagram");
-a3.append(i3);
+a6.append(i3);
 
 
 //segundo div
@@ -53,26 +53,26 @@ footer.append(divFAQ);//contenedor fluido
 
 //div FAQ
 //Contáctanos
-let a4 = document.createElement("a");
-a4.class= "footer";
+let a7 = document.createElement("a");
+a7.class= "footer";
 // a4.class ="footer";
-a4.href="./contacto.html";
-a4.innerText = "Contáctanos";
-divFAQ.append(a4);
+a7.href="./contacto.html";
+a7.innerText = "Contáctanos";
+divFAQ.append(a7);
 
 //FAQs
-let a5 = document.createElement("a");
-a5.class ="footer";
-a5.href="#";
-a5.innerText = "FAQs";
-divFAQ.append(a5);
+let a8 = document.createElement("a");
+a8.class ="footer";
+a8.href="./FQA.html";
+a8.innerText = "FAQs";
+divFAQ.append(a8);
 
 //Avisos de privacidad
-let a6 = document.createElement("a");
-a6.class = "footer";
-a6.href="#";
-a6.innerText = "Avisos de privacidad";
-divFAQ.append(a6);
+let a9 = document.createElement("a");
+a9.class = "footer";
+a9.href="#";
+a9.innerText = "Avisos de privacidad";
+divFAQ.append(a9);
 
 //tercer div
 

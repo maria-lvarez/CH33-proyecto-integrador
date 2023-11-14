@@ -21,7 +21,7 @@ function validarCantidad(){
     else {
         return false;
     }
-}//ValidarTeléfono
+}//ValidarCantidad
 
 function validarEmail() { 
      let re = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
@@ -36,10 +36,10 @@ function validarEmail() {
 function validarEnvio(){
     let response = emailjs.send;
     if (response==console.assert('SUCCESS!', response.status, response.text)){
-        return false;
+        return true;
     }
     else{
-        return true;
+        return false;
     }
 
 }
@@ -69,14 +69,14 @@ btnEnviar.addEventListener("click", function(event){
         alertValidaciones.style.display="block";
         txtNumber.style.border="solid thin red";
         isValid = false;
-    }//If ! validarTeléfono
+    }//If ! validarCantidad
 
     if(! validarEmail()){
         alertValidaciones.innerHTML+="El campo <strong>Email</strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtEmail.style.border="solid thin red";
         isValid = false;
-    }//If ! validarTeléfono
+    }//If ! validarEmail
 
     if(txtMensaje.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         alertValidaciones.innerHTML+="El campo <strong> Mensaje </strong> es requerido <br/> ";
@@ -116,6 +116,25 @@ btnEnviar.addEventListener("click", function(event){
         }, function(error) {
            console.log('FAILED...', error);
         });
+
+    let modal = document.getElementByClassName("btn");
+    modal.insertAdjacentHTML(`<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>`);
 
 });//btnEnviar.addEventListener
 

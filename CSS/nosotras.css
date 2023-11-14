@@ -10,15 +10,6 @@
 }
 
 html{font-size: 16px;};
-
-
-/*navbar*/
-
-
-nav{
-    height:10rem;
-}
-
 .container-fluid{ 
     /* background-color: blueviolet; */
     background-color: white;
@@ -27,68 +18,6 @@ nav{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 } 
-
-.navbar-collapse {
-    /* background-color: aqua; */
-    flex-basis: 100%;
-    flex-grow: 0.2;
-    align-items: center;
-}
-
-#span-img{
-margin-left: 0.5rem;
-margin-right: 0.5rem;
-}
-
-#LogoPrincipal{
-    
-    width: 22rem;
-    height: 10rem;
-}
-
-.nav-link{
-    color: #83764C; 
-    display: flex;
-    margin-right: 4rem;
-    font-size: 1.5rem;
-}
-
-.form-control {
-    border-color:#83764C;
-    margin-top: 1rem;
-    margin-right: 0;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    width: 8rem;
-}
-
-.form-control::placeholder{
-    color: #83764C;
-}
-
-/*icono de la lupita */
-i.fa-solid{
-    padding-top: 1rem;
-    font-size: 2rem;
-    color:#83764C;
-}
-
-
-.search{ /*search*/
-    margin-top: 1.4rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
-}
-
-/*icono de la lupita */
-.fa-cart-shopping{
-    padding-bottom: 1rem;
-    font-size: 2rem;
-    color:#83764C;
-}
-
-
 /*Imagenes de personas*/
 
 .container {
@@ -210,48 +139,3 @@ i.fa-solid{
     font-style: 10px;
 
 }
-
-
-<<<<<<< HEAD:CSS/style.css
-
-=======
-/*Necesario para que toda la estructura del footer funcione*/
-#footer, .icons, .FAQ, .gran{
-    background-color: #8A2F2E;
-    height: 9rem;
-    margin: 0;
-    
-}
-
-.fa-brands:hover, .FAQ:hover{
-    color: #0f0f10;
-}
-.granBazar{/*color de @2023ElGranBazar*/
-    color: #F7BB75;
-}
-
-.fa-brands{/*color y espacio de icons*/
-    color: #F7BB75;
-    margin: 1rem;
-}
-
-.footer{ /*color y espacio de FAQ*/
-    color: #F7BB75;
-    margin: 0.2rem;
-}
-
-.navbar>.icons{
-    justify-content:center; /*left?*/
-    font-size: 2.5rem;
-}
-
-.navbar>.FAQ{
-    justify-content:none;
-    font-size: 1.5rem;
-}
-.navbar>.gran{/*direccion del container de @2023ElGranBazar y */
-    justify-content:center;
-    font-size: 1rem;
-    padding-right: 1rem;
-}
->>>>>>> 93055c9153156ca285f3c9818f5dfb3eaff717cd:CSS/nosotras.css
