@@ -1,0 +1,19 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html{font-size: 16px;};
+
+/* #img-funciona{
+  min-height: 200px; 
+  min-width: 220px
+  
+} */
+

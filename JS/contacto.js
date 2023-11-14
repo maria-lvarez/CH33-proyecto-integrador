@@ -21,7 +21,7 @@ function validarCantidad(){
     else {
         return false;
     }
-}//ValidarTeléfono
+}//ValidarCantidad
 
 function validarEmail() { 
      let re = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
@@ -69,14 +69,14 @@ btnEnviar.addEventListener("click", function(event){
         alertValidaciones.style.display="block";
         txtNumber.style.border="solid thin red";
         isValid = false;
-    }//If ! validarTeléfono
+    }//If ! validarCantidad
 
     if(! validarEmail()){
         alertValidaciones.innerHTML+="El campo <strong>Email</strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtEmail.style.border="solid thin red";
         isValid = false;
-    }//If ! validarTeléfono
+    }//If ! validarEmail
 
     if(txtMensaje.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         alertValidaciones.innerHTML+="El campo <strong> Mensaje </strong> es requerido <br/> ";
