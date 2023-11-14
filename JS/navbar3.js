@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </button>
                             </form>    
                             </li>
-                            <li><i id="carrito" class="bi bi-cart3"></i></li>
+                            <li><a id="carrito" class="nav-link" href="./carrito.html"><i id="carrito" class="bi bi-cart3"></i></li>
                 </ul>
             </div>
         </div>

@@ -28,8 +28,8 @@ function addItem(arreglo){
         '        <p class="card-text">'+item.price+'</p>\n' +
         '        </div>\n' +
         '        <div class="btn-group row g-2 p-3">\n'+
-        '        <a id="btnCarritoCard" href="#" class="btn"><strong>Añadir al carrito</strong></a>\n'+
-        '        <a id="btnComprarCard" href="#" class="btn"><strong>Comprar</strong></a>\n'+
+        '        <a id="btnCarritoCard" href="../../carrito.html"" class="btn"><strong>Añadir al carrito</strong></a>\n'+
+        '        <a id="btnComprarCard" href="../../compra.html" class="btn"><strong>Comprar</strong></a>\n'+
         '        </div>\n'+
         '</div>\n' +
         '<br/>\n';
