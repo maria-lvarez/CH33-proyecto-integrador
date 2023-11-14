@@ -1,46 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Registro</title>
-        <!--Favicon-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="./src/images/LogoSinFondo2.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Bootstrap icons-->
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="./CSS/Registro.css"></link>
+    <!--CSS Navbar-->
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <!--CSS Navbar-->
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <!--Iconos Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        <!--CSS Navbar-->
-        <link rel="stylesheet" href="./CSS/navbar.css">
-         <!--CSS Footer-->
-         <link rel="stylesheet" href="./CSS/footer.css">
     
-    </head>
-    <body>
-        <header>
-                <nav id="navbar" class="navbar navbar-expand-md"></nav>
-        </header>
-<body>
+  </head>
+  <body>
     <nav id="navbar" class="navbar navbar-expand-md">
-
     </nav>
 
-  
-    <footer id="footer" class="navbar navbar-expand-md"></footer>
+    <section class="p-5" id="cuerpoRegistro">
+      <!--Validaciones-->
+      <div class="alert alert-success fade show" style="display:none;" role="alert" id="alertValidaciones1">
+        <p id="Validaciones-envio"></p>
+    </div>
+    <!--Contenedor de registro-->
+      <div class="container w-75 mt-5 mb-5 rounded-4 bg-white p-3">
+      <div class="mb-3">
+      <h2 class="text-center p-5 fs-2"><strong>Crear cuenta</strong> </h2>
+        <form>
+          <div class=" container-fluid row mb-4 col-12">
+            <label for="InputNombreComp" class="form-label" >Nombre completo</label>
+            <input type="text" class="form-control registroDatos" id="InputNombreComp" aria-describedby="emailHelp">
+          </div>
+        <div class="container-fluid row mb-5 ">
+          <div class="col-6">
+            <label for="InputNombreComp" class="form-label" >Correo electrónico</label>
+            <input type="text" class="form-control registroDatos" id="InputNombreComp" aria-describedby="emailHelp placeholder="Ejemplo:elgranbazar@gmail.com"">
+          </div>
+          <div class=" col-6">
+            <label for="InputTelReg" class="form-label">Número telefónico</label>
+            <input type="number" class="form-control registroDatos" id="InputTelReg">
+          </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-<script src="./JS/navbar3.js"></script>
-<script src="./JS/footer.js" defer> </script>
-</body>
+        <div class="container-fluid row mb-5 ">
+          <div class="col-6">
+            <label for="InputEmailReg" class="form-label" placeholder="Ejemplo:elgranbazar@gmail.com">Contraseña</label>
+            <input type="email" class="form-control registroDatos" id="InputPasswordReg" aria-describedby="emailHelp">
+          </div>
+          <div class="col-6 ">
+            <label for="InputPasswordReg" class="form-label">Confirmación de contraseña</label>
+            <input type="password" class="form-control registroDatos" id="InputPasswordReg">
+          </div>
+        </div>
+        </div>
+
+          <div class="text-center">
+          <button type="submit" class="btn mb-3 " id="btnCrearCuenta">Crear cuenta</button>
+          </br>
+          <span class="form-text text-center">¿Ya tienes cuenta? <a href="">Ingresa aquí</a>
+          </div>
+            <hr>
+          <p class="text-center">O continúa con</p> 
+       </form>
+       <!--Login con redes sociales-->
+       <div class="container w-100 my-5 ">
+        <div class="row text-center">
+          <span class="col-12"></span>
+        </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-primary w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2">
+                    <img src="./src/facebook.avif" width="32">
+                  </div>
+                  <div class="col-10">
+                    Facebook
+                  </div>
+
+                </div>
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-danger w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2">
+                    <img src="./src/images/google.png" width="32">
+                  </div>
+                  <div class="col-10">
+                    Google
+                  </div>
+
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="navbar navbar-expand-md"></footer>
+    <!--Scripts-->
+    <script src="./JS/registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./JS/navbar3.js"></script>
+    <script src="./JS/footer.js" defer> </script>
+  </body>
 </html>

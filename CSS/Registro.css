@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+
+#cuerpoRegistro{
+background-image: url(https://cdn.pixabay.com/photo/2019/06/12/12/27/egypt-4269151_1280.jpg);
+background-position: center;
+background-size: cover;
+}
+
+h2{
+    color:#8A2F2E;
+}
+
+#btnCrearCuenta {
+    justify-items: center ;
+    background-color: #8A2F2E;
+    color: #F7BB75; 
+    border-color:#8A2F2E;
+}
+
+.registroDatos{
+    border-color:#8A2F2E;
+
+    
+    }
