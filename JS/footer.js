@@ -60,11 +60,11 @@ a7.href="./contacto.html";
 a7.innerText = "Contáctanos";
 divFAQ.append(a7);
 
-//FAQs
+//FAQ
 let a8 = document.createElement("a");
 a8.class ="footer";
 a8.href="./FQA.html";
-a8.innerText = "FAQs";
+a8.innerText = "FAQ";
 divFAQ.append(a8);
 
 //Avisos de privacidad
