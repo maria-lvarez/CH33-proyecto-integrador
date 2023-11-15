@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <li><a id="palabras" class="nav-link" aria-current="page" href="./nosotras.html">Nosotros</a></li>
                             <li><a id="palabras" class="nav-link" href="./contacto.html">Contacto</a></li>
                             <li><a id="palabras" class="nav-link" href="./entretenimiento.html">Categorias</a></li>
-                            <li><a id="palabras" class="nav-link" href="#">Log in</a></li>
+                            <li><a id="palabras" class="nav-link" href="./Registro.html">Log in</a></li>
                             <li> 
                             <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </button>
                             </form>    
                             </li>
-                            <li><i id="carrito" class="bi bi-cart3"></i></li>
+                            <li><a id="carrito" class="nav-link" href="./carrito.html"><i id="carrito" class="bi bi-cart3"></i></li>
                 </ul>
             </div>
         </div>

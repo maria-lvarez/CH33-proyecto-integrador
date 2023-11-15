@@ -6,21 +6,13 @@ let confirmPassword = document.getElementById("InputPasswordConf")
 let mensajecont= document.getElementById("mensajecontr")
 let btnCrearCuenta= document.getElementById("btnCrearCuenta");
 
-
-
 (()=>{  'use strict'
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
 const forms= document.querySelectorAll('.needs-validation')
   // Loop over them and prevent submission
-Array.from(forms).forEach(form=>{
-  form.addEventListener('submit',event=>{      
-    if(!form.checkValidity()){        
-        event.preventDefault();        
-        event.stopPropagation();    
-        
-      }
-      form.classList.add('was-validated')    
-    },false)  })})()
+Array.from(forms).forEach(form=>{ form.addEventListener('submit',event=>{      
+    if(!form.checkValidity()){        event.preventDefault();        event.stopPropagation()      }
+      form.classList.add('was-validated')    },false)  })})()
 
 
 
@@ -51,5 +43,3 @@ btnCrearCuenta.addEventListener("click", function(event){
     localStorage.setItem("usuarios", JSON.stringify(usuarios)); //Convierte los alementos de mi array en string
 
 }})
-
-
