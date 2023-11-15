@@ -20,7 +20,7 @@ html{font-size: 16px;};
 } 
 /*Imagenes de personas*/
 
-.container {
+.containerNosotras {
     border-radius: 50%;
     height: 312px;
     -webkit-tap-highlight-color: transparent;
@@ -139,3 +139,16 @@ html{font-size: 16px;};
     font-style: 10px;
 
 }
+
+/*.zoom {
+    padding: 50px;
+
+
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) 
+  }*/
