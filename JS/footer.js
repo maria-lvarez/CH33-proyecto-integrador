@@ -64,7 +64,7 @@ divFAQ.append(a7);
 let a8 = document.createElement("a");
 a8.class ="footer";
 a8.href="./FAQ.html";
-a8.innerText = "FAQs";
+a8.innerText = "FAQ";
 divFAQ.append(a8);
 
 //Avisos de privacidad
