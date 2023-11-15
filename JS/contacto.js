@@ -9,7 +9,7 @@ let txtNumber = document.getElementById("exampleFormControlInput3")
 let txtMensaje = document.getElementById("exampleFormControlTextarea1");
 let btnClear = document.getElementById("btnClear");
 
-function validarCantidad(){
+/* function validarCantidad(){
     if(txtNumber.value.length ===10){
         return true;
     }
@@ -21,10 +21,31 @@ function validarCantidad(){
     else {
         return false;
     }
-}//ValidarCantidad
+} *///ValidarCantidad
+function validarNombre(){
+    let re = /^(?!\s)[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/;
+    if (re.test(txtNombre.value) ){
+        return true;
+    }
+    else {
+        return false;
+    }
+    
+}//validarnombre
+
+function validarCantidad(){
+    let re = /^(?!.*(\d)\1{4})\d{10}$/;
+    if (re.test(txtNumber.value) ){
+        return true;
+    }
+    else {
+        return false;
+    }
+    
+}//validartel
 
 function validarEmail() { 
-     let re = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+     let re = /^([\-\.a-zA-Z0-9]+)@([\-\.a-zA-Z0-9]+)\.([a-zA-Z]){2,7}$/;
     if (re.test(txtEmail.value) ){
         return true;
     }
@@ -33,7 +54,7 @@ function validarEmail() {
     }
 }//validarEmail
 
-function validarEnvio(){
+/* function validarEnvio(){
     let response = emailjs.send;
     if (response==console.assert('SUCCESS!', response.status, response.text)){
         return true;
@@ -42,7 +63,7 @@ function validarEnvio(){
         return false;
     }
 
-}
+} */
  
 btnEnviar.addEventListener("click", function(event){
 
@@ -57,21 +78,28 @@ btnEnviar.addEventListener("click", function(event){
     txtMensaje.style.border = "";
 
 
-    if(txtNombre.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
+   /*  if(txtNombre.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         alertValidaciones.innerHTML="El campo <strong> Nombre </strong> es requerido <br/> ";
         alertValidaciones.style.display="block"; //block o inline para que lo muestre
         txtNombre.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
         isValid = false;
-    }//txtNombre < 3
+    } *///txtNombre < 3
+    if(! validarNombre()){
+        alertValidaciones.innerHTML+="El campo <strong>Nombre</strong> es requerido <br/>";
+        alertValidaciones.style.display="block";
+        txtNumber.style.border="solid thin red";
+        isValid = false;
+    } //If ! validarNombre
+
 
     if(! validarCantidad()){
         alertValidaciones.innerHTML+="El campo <strong>Teléfono</strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtNumber.style.border="solid thin red";
         isValid = false;
-    }//If ! validarCantidad
-
-    if(! validarEmail()){
+    } //If ! validarCantidad
+    
+       if(! validarEmail()){
         alertValidaciones.innerHTML+="El campo <strong>Email</strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtEmail.style.border="solid thin red";
@@ -85,17 +113,17 @@ btnEnviar.addEventListener("click", function(event){
         isValid = false;
     }//validar mensaje
 
-    if(! validarEnvio()){
+   /*  if(! validarEnvio()){
        alertValidaciones.innerHTML+= "<strong>ERROR</strong> eL mensaje no ha sido enviado, prueba de nuevo <br/> ";
        alertValidaciones.style.display="block"; //block o inline para que lo muestre
        txtMensaje.style.border="solid thin red";
        isValid = false;
-    }//Validar si se envio
-    else{
+    }//Validar si se envio */
+    /* else{
         alertValidaciones1.innerHTML+="¡El <strong>mensaje</strong> ha sido enviado correctamente!";
         alertValidaciones1.style.display="block";
         isValid = true;
-    }
+    } */
 
    // txtNombre.value = ""; 
     //txtNumber.value = "";
@@ -153,3 +181,9 @@ btnClear.addEventListener("click", function(event){
     txtEmail.value ="";
     txtMensaje.value = "";
 });//btnClear.addEventListener
+
+
+function mensajeEnviado() {
+
+    alert('tu mensaje se envio exitosasmente!');
+}
