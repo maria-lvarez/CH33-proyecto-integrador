@@ -11,6 +11,13 @@
     margin-right: 0.5rem;
     margin-left: 0.5rem;
 }
+
+/*icono del log in*/
+#logIn {
+    font-size: 2rem;
+    color:#83764C;
+}
+
 /*Manipular la cajita del input de buscar*/
 input.form-control.me-2{
     border-color:#83764C;
