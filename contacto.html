@@ -43,42 +43,47 @@
     <section class="container-fluid1 p-4">
         <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
         <p id="alertValidacionesTexto"></p>
-    </div>
+        </section>
     <section class="container-fluid1 p-4">
         <div class="alert alert-success fade show" style="display:none;" role="alert" id="alertValidaciones1">
         <p id="Validaciones-envio"></p>
+    </section>
+
+    <div class="d-flex justify-content-center">
+        <form id="form-about" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    </br>
+                    <input type="text" class="form-control nombre" id="exampleFormControlInput1" placeholder="Nombre">
+                    </input>
+                    <div class="invalid-feedback">
+                        Nombre inválido
+                    </div>
+                </div>
+
+    <div class="row">
+        <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="correo@dominio.com">
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Teléfono">
+        </div>
     </div>
 
-        <div class="mb-3 col-12 p-4 mx-5">
-            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-            </br>
-            <input type="text" class="form-control nombre" id="exampleFormControlInput1" placeholder="Nombre"></input>
-            <div class="invalid-feedback">
-                Nombre inválido
-            </div>
+        <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
         </div>
-        <div class="d-flex flex-row p-4 mx-5">
-        <div class="mb-3 col-6 p-2">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="correo@dominio.com">
-        </div>
-        <div class="mb-3 col-6 p-2">
-            <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Teléfono">
-        </div>
-        </div>
-
-        <div class="mb-3 col-12 p-4 mx-5">
-            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
-        </div>
-        
-        <div class="btns">
-            <button type="button" class="btn btn-primary boton-fin-comp" id="btnEnviar" data-bs-toggle="modal" data-bs-target="exampleModalLabel"  onclick="mensajeEnviado()">Enviar</button>
+      
+        <div class="form-group col-sm-12 col-md-12 col-lg-12 my-5">
+            <button type="button" class="btn btn-primary boton-fin-comp" id="btnEnviar" data-bs-toggle="modal" data-bs-target="exampleModalLabel">Enviar</button>
             
             <button id="btnClear" class="btn btn-primary btn-block" type="button" id="btnClear">Limpiar todo</button>
-            </div>
-        </section>
+        </div>
+        </form>
+    </div>
     </main>
     
     <!--Footer-->

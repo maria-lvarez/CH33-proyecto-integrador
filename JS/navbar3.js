@@ -17,13 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             <li><a id="palabras" class="nav-link" href="./index.html">Home</a></li>
                             <li><a id="palabras" class="nav-link" aria-current="page" href="./nosotras.html">Nosotras</a></li>
                             <li><a id="palabras" class="nav-link" href="./contacto.html">Contacto</a></li>
-<<<<<<< HEAD
-                            <li><a id="palabras" class="nav-link" href="./entretenimiento.html">Categorias</a></li>
-                            <li><a id="palabras" class="nav-link" href="./Registro.html">Log in</a></li>
-=======
                             <li><a id="palabras" class="nav-link" href="./entretenimiento.html">Categorías</a></li>
-                            <li><a id="palabras" class="nav-link" href="#">Log in</a></li>
->>>>>>> 8295e25008b931394eb54e9456ee31b5193e65e5
+                            <li><a id="palabras" class="nav-link" href="./Registro.html">Log in</a></li>
                             <li> 
                             <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
