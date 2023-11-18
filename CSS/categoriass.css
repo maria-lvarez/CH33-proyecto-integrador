@@ -1,0 +1,132 @@
+/*banner*/
+.banner-img-general{
+    background-image: url(https://www.65ymas.com/uploads/s1/33/64/75/bigstock-travel-geography-navigation-co-196030186.jpeg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-img{
+    background-image: url(https://img.freepik.com/fotos-premium/collection-of-vintage-clothing-items-on-clothing-rack_933496-189.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-img-electrodomesticos{
+    background-image: url(https://www.roca.es/rocalife/wp-content/uploads/2021/12/cocinas-vintage-muebles-cocina-madera-roca_900x505_acf_cropped@2x.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-img-electronicos{
+    background-image: url(https://img.freepik.com/fotos-premium/viejo-televisor-vintage-sobre-mesa_905502-164.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-img-entretenimiento{
+    background-image: url(https://www.drguillermorojas.com/wp-content/uploads/2016/04/banner-d.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-img-rya{
+    background-image: url(https://img.freepik.com/fotos-premium/collection-of-vintage-clothing-items-on-clothing-rack_933496-189.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-img-recienanadido{
+    background-image: url(https://img.freepik.com/fotos-premium/maquina-escribir-antigua-articulos-vintage-camara-fotos_154730-16.jpg);
+    height: 12rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+/*texto del banner*/
+
+.banner-img-general p{
+    font-size: 3rem;
+}
+
+.banner-img p{
+    font-size: 3rem;
+}
+.banner-img-electrodomesticos p{
+    font-size: 3rem;
+}
+
+.banner-img-electronicos p{
+    font-size: 3rem;
+}
+
+.banner-img-entretenimiento p{
+    font-size: 3rem;
+}
+
+.banner-img-rya p{
+    font-size: 3rem;
+}
+
+.banner-img-recienanadido p{
+    font-size: 3rem;
+}
+
+.container{
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+
+/*botones*/
+#btnCarritoCard{
+    border-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #5E1F28;
+}
+
+#btnComprarCard{
+    background-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+#btnCat{
+    background-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #fff;
+}

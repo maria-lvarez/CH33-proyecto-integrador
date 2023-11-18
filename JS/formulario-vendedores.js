@@ -19,6 +19,8 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 
 let cardsForm = document.getElementById("cardsForm");
 
+let txtImg= document.getElementById("img-product");
+
 //imagen para cargar
 let imagen = document.querySelector('#img-product');
 
@@ -133,6 +135,7 @@ btnEnviarForm.addEventListener("click", function(event){
     txtEnvio.style = "";
     terminos1.style = "";
     terminos2.style = "";
+    imagen.style = "";
 
 
     if(txtProducto.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
