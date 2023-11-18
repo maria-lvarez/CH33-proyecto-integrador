@@ -19,6 +19,8 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 
 let cardsForm = document.getElementById("cardsForm");
 
+let txtImg= document.getElementById("img-product");
+
 //imagen para cargar
 let imagen = document.querySelector('#img-product');
 
@@ -107,6 +109,14 @@ function validarTerminos2(){
     }
 }//validarTerminos2
 
+//function validarImagen(){
+   // if (txtImg.file.length > 1){
+    //    return true
+   // }else {
+   //     return false
+  //  }
+//}//validar si imagen esta vacia
+
 
 
 btnEnviarForm.addEventListener("click", function(event){
@@ -127,6 +137,7 @@ btnEnviarForm.addEventListener("click", function(event){
     txtEnvio.style = "";
     terminos1.style = "";
     terminos2.style = "";
+    imagen.style = "";
 
 
     if(txtProducto.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
@@ -211,6 +222,21 @@ btnEnviarForm.addEventListener("click", function(event){
         isValid = false;
     }//If ! validarterminos1
 
+    if (imagen.value == 0){
+        alertValidaciones.innerHTML+="El campo <strong> imagen </strong> es requerido <br/> ";
+        alertValidaciones.style.display="block";
+        terminos2.style.border="solid thin red";
+        isValid = false;
+    }
+
+
+    //if(txtImg == 0){ //si no hay al menos una img lanza la alerta.
+    //if(! validarImagen()){
+      //  alertValidaciones.innerHTML="El campo <strong> imagen </strong> es requerido <br/> ";
+       // alertValidaciones.style.display="block"; //block o inline para que lo muestre
+       // txtProducto.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
+      //  isValid = false;
+    //}//validar imagen
 
     //JSON
     if(isValid){ //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
