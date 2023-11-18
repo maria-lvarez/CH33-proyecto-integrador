@@ -52,6 +52,11 @@
      color: #F7BB75;
      border-color: #8A2F2E;
  }
+
+ #upload_widget {
+    border-radius: 0.25rem;
+ }
+
  .btn-enviar-der{
      background-color: #8A2F2E;
      border: #8A2F2E;
