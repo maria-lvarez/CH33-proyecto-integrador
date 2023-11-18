@@ -1,31 +1,36 @@
-const forms = document.querySelectorAll('.needs-validation')
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formLogin');
+    const alertValidaciones = document.getElementById('alertValidaciones');
 
-    
-    form.addEventListener('submit', function(event) {
-        form.classList.add('was-validated') 
+    form.addEventListener('submit', function (event) {
+
         event.preventDefault();
 
         const email = document.getElementById('inputEmaillogin').value;
         const password = document.getElementById('inputPasswordlogin').value;
 
         if (!email || !password) {
-            alertValidaciones.innerHTML+="Por favor, ingresa tu correo electrónico y contraseña.<br/>";
-            alertValidaciones.style.display="block"; 
+            alertValidaciones.innerHTML = "Por favor, ingresa tu correo electrónico y contraseña.<br/>";
+            alertValidaciones.style.display = "block";
             return;
         }
 
         if (validarCredenciales(email, password)) {
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
             window.location.href = 'index.html';
-        } 
-
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
-
+        } else {
+            alertValidaciones.innerHTML = "El usuario no existe o las credenciales son incorrectas.<br/>";
+            alertValidaciones.style.display = "block";
+        }
+        form.classList.add('was-validated');
     });
 });
 
+function validarCredenciales(email, password) {
+    let usuarios = JSON.parse(localStorage.getItem('datos')) || [];
+    return usuarios.some(usuario => usuario.correo === email && usuario.password === password);
+}
 
 function obtenerUsuario() {
     const email = localStorage.getItem('email');
@@ -36,11 +41,6 @@ function obtenerUsuario() {
     }
 
     return { email, password };
-}
-
-function validarCredenciales(email, password) {
-    let usuarios = JSON.parse(localStorage.getItem('datos')) || [];
-    return usuarios.some(usuario => usuario.correo === email && usuario.password === password);
 }
 
 const usuario = obtenerUsuario();
