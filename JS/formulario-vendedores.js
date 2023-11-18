@@ -109,15 +109,13 @@ function validarTerminos2(){
     }
 }//validarTerminos2
 
-//function validarImagen(){
-   // if (txtImg.file.length > 1){
-    //    return true
-   // }else {
-   //     return false
-  //  }
-//}//validar si imagen esta vacia
-
-
+function validarImagen() {
+    if (imagen.src.trim() === '') {
+        return false;
+    } else {
+        return true;
+    }
+}//ValidarImagen
 
 btnEnviarForm.addEventListener("click", function(event){
 
@@ -222,21 +220,31 @@ btnEnviarForm.addEventListener("click", function(event){
         isValid = false;
     }//If ! validarterminos1
 
-    if (imagen.value == 0){
-        alertValidaciones.innerHTML+="El campo <strong> imagen </strong> es requerido <br/> ";
+    if (!validarImagen()){
+        alertValidaciones.innerHTML+="El campo <strong> Imagen del producto </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
-        terminos2.style.border="solid thin red";
         isValid = false;
-    }
+    }//If ! validarImagen
 
 
-    //if(txtImg == 0){ //si no hay al menos una img lanza la alerta.
-    //if(! validarImagen()){
-      //  alertValidaciones.innerHTML="El campo <strong> imagen </strong> es requerido <br/> ";
-       // alertValidaciones.style.display="block"; //block o inline para que lo muestre
-       // txtProducto.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
-      //  isValid = false;
-    //}//validar imagen
+    //Boton de la imagen para cargar
+    
+    let myWidget = cloudinary.createUploadWidget({
+        cloudName: 'dvdf3ncs2', 
+        uploadPreset: 'ElGranBazar',
+        folder: 'widgetUpload', 
+        cropping: true
+    }, (error, result) => { 
+        if (!error && result && result.event === "success") { 
+            console.log('Imagen subida con éxito: ', result.info); 
+            imagen.src = result.info.secure_url;
+        }
+    });
+
+    document.getElementById("upload_widget").addEventListener("click", function(){
+        myWidget.open();
+    }, false);
+
 
     //JSON
     if(isValid){ //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
@@ -297,18 +305,18 @@ btnClear.addEventListener("click", function(event){
 
 
 //Boton de la imagen para cargar
-let myWidget = cloudinary.createUploadWidget({
-    cloudName: 'dvdf3ncs2', 
-    uploadPreset: 'ElGranBazar',
-    folder: 'widgetUpload', 
-    cropping: true
-  }, (error, result) => { 
-    if (!error && result && result.event === "success") { 
-        console.log('Imagen subida con éxito: ', result.info); 
-        imagen.src = result.info.secure_url;
-     }
-});
+// let myWidget = cloudinary.createUploadWidget({
+//     cloudName: 'dvdf3ncs2', 
+//     uploadPreset: 'ElGranBazar',
+//     folder: 'widgetUpload', 
+//     cropping: true
+//   }, (error, result) => { 
+//     if (!error && result && result.event === "success") { 
+//         console.log('Imagen subida con éxito: ', result.info); 
+//         imagen.src = result.info.secure_url;
+//      }
+// });
 
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
+// document.getElementById("upload_widget").addEventListener("click", function(){
+//     myWidget.open();
+//   }, false);

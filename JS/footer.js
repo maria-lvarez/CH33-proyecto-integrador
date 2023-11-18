@@ -1,4 +1,4 @@
-let footer=document.getElementById("footer");
+const footer = document.querySelector("footer");
 
 //Primer div
 let divContainer2 = document.createElement("div");
