@@ -1,4 +1,4 @@
-// Pueden cambiar sin problema estos let por const, si en algun punto sin querer quieren reasignar el valor o cambiarlo es mas probable que lo detecten con el const que con let
+/*// Pueden cambiar sin problema estos let por const, si en algun punto sin querer quieren reasignar el valor o cambiarlo es mas probable que lo detecten con el const que con let
 // despues de cada getElementById hagan un console.log del value a 
 // let txtName = document.getElementById("InputNombreComp").value;
 // let txtCorreo = document.getElementById("InputCorreo").value;
@@ -115,4 +115,4 @@ Array.from(forms).forEach(form => {
     // }
 });
 
-//Alert
+//Alert*/

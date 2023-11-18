@@ -1,4 +1,4 @@
-const loginForm = document.querySelector("#formLogin")
+/*const loginForm = document.querySelector("#formLogin")
 loginForm.addEventListener('submit', (e)=>{
     e.preventDefault()
     const email = document.getElementById("inputEmaillogin").value
@@ -13,7 +13,7 @@ loginForm.addEventListener('submit', (e)=>{
     window.location.href = "index.html"   
 
 })
-
+*/
 
 
 
