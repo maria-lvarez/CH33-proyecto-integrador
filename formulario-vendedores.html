@@ -40,11 +40,11 @@
 <div class=" container-fluid row g-5">
 
   <div id="for-izq" class="col my-5">
-      <img id="img-p-input" src="./src/images/flat-lay-objetos-vintage-naturaleza-muerta.jpg" class="img-fluid mt-5" alt="...">
+      <img id="img-product" src="./src/images/flat-lay-objetos-vintage-naturaleza-muerta.jpg" class="img-fluid mt-5" alt="...">
       <div class="input-group mt-3">
-        <img id="img-product">
+       <!-- <img id="img-product"> esta se comento para uque la imagen aparesca contenida en el recuadro de la de arriba-->
         <!--Boton para Cargar imagen-->
-        <button id="upload_widget" class="btn btn-secondary btn-enviar-der mr-2 col-2" class="cloudinary-button justify-content-center">Carga tu imagen</button>
+       <!-- <button id="upload_widget" class="btn btn-secondary btn-enviar-der mr-2 col-2" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>-->
       </div><!-- agrega un archivo-->
       <p class="mr-5 aviso-texto text-center">Si tienes dudas <a href="./contacto.html"> contáctanos </a></p>
 
@@ -82,11 +82,11 @@
       <h1 class="mt-3 titulo-form">¿Qué quieres vender?</h1>
   <div class="my-3 mr-5 ">
       <label for="exampleFormControlInput1" class="form-label">Producto</label>
-      <input type="email" class="form-control formulario-bo" id="inputFormProducto" placeholder="Producto">
+      <input type="email" class="form-control formulario-bo" id="inputFormProducto" placeholder="Producto" required>
     </div>
     <div class="mb-3 mr-5">
       <label for="inputFormCategoria" class="form-label">Categoría</label>
-      <select id="inputFormCategoria" class="form-select">
+      <select id="inputFormCategoria" class="form-select" required>
         <option value="" disabled="disabled">Elige una opción</option>
         <option value="Ropa-accesorios"selected>Ropa y accesorios</option>
         <option value="Electrodomesticos">Electrodomésticos</option>
@@ -106,27 +106,27 @@
     </div>
     <div class="mb-3 mr-5">
       <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-      <textarea class="form-control formulario-bo" id="inputFormDescripcion" placeholder="Descripción" rows="3"></textarea>
+      <textarea class="form-control formulario-bo" id="inputFormDescripcion" placeholder="Descripción" rows="3" required></textarea>
     </div>
     <div class="my-3 mr-5 ">
       <label for="exampleFormControlInput1" class="form-label">Precio</label>
-      <input type="email" class="form-control formulario-bo" id="inputFormPrecio" placeholder="Precio">
+      <input type="email" class="form-control formulario-bo" id="inputFormPrecio" placeholder="Precio" required>
     </div>
     <div class="my-3 mr-5 ">
       <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
-      <input type="email" class="form-control formulario-bo" id="inputFormTel" placeholder="Teléfono">
+      <input type="email" class="form-control formulario-bo" id="inputFormTel" placeholder="Teléfono" required>
     </div>
     <div class="my-3 mr-5 ">
       <label for="exampleFormControlInput1" class="form-label">Dirección</label>
-      <input type="email" class="form-control formulario-bo" id="inputFormDireccion" placeholder="Dirección">
+      <input type="email" class="form-control formulario-bo" id="inputFormDireccion" placeholder="Dirección" required>
     </div>
     <div class="my-3 mr-5 ">
       <label for="exampleFormControlInput1" class="form-label">Código Postal</label>
-      <input type="email" class="form-control formulario-bo" id="inputFormCP" placeholder="Código Postal">
+      <input type="email" class="form-control formulario-bo" id="inputFormCP" placeholder="Código Postal" required>
     </div>
     <div class="mb-3 mr-5">
       <label for="inputFormEnvio" class="form-label">Envío</label>
-      <select id="inputFormEnvio" class="form-select">
+      <select id="inputFormEnvio" class="form-select" required>
         <option value="" disabled="disabled">Elige una opción</option>
         <option value="Fedex"selected>Fedex</option>
         <option value="Correos-de-Mexico">Correos de México</option>
@@ -135,19 +135,20 @@
         <option value="Estafeta">Estafeta</option>
       </select>
     </div>
+    <button id="upload_widget" class="btn btn-secondary btn-enviar-der mr-1 col-2" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>
     <p class="mr-5 aviso-texto">Recuerda que los costos de envio son cubiertos por el comprador</p>
 
     <div id="check-form" class="mr-5">
       <div class="row">
      <div class="col md-8"> 
       <div class="form-check">
-          <input id="terminos1" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1">
+          <input id="terminos1" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1" required>
           <label class="form-check-label cubito-text" for="defaultCheck1">
             Acepto los terminos y condiciones.
           </label>
         </div>
         <div class="form-check container">
-          <input id="terminos2" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1">
+          <input id="terminos2" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1" required>
           <label class="form-check-label cubito-text" for="defaultCheck1">
            Acepto los terminos de selección de productos.
           </label>
@@ -186,8 +187,10 @@
 
 </main>
 
-    <footer id="footer" class="navbar navbar-expand-md g-0">
-    </footer> 
+<footer id="footer-bazar" class="container-flex row">
+
+</footer>
+
 
 
        <script src="./JS/navbar3.js" defer> </script>

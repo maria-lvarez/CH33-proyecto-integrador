@@ -52,6 +52,11 @@
      color: #F7BB75;
      border-color: #8A2F2E;
  }
+
+ #upload_widget {
+    border-radius: 0.25rem;
+ }
+
  .btn-enviar-der{
      background-color: #8A2F2E;
      border: #8A2F2E;
@@ -71,11 +76,13 @@
  .btn-enviar-izq:hover{
      background-color: #F7BB75;
  }
+
  /* estilos de imagenes de pie de pagina*/
  img.img-fondo{
      display: block;
      filter:  brightness(50%) blur(.08rem);
      height: 20rem;
+     width: 100%;
  }
  
  img-fondo{
