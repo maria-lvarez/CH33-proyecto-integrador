@@ -10,6 +10,7 @@
 // let validFeedback = document.getElementsByClassName("valid-feedback");
 
 // Igual aqui -> const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+let form= document.getElementById("form")
 let usuarios=[]
 usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
@@ -76,11 +77,14 @@ Array.from(forms).forEach(form => {
                     }
                 }    
             }
+        
+            // window.location.href = "login.html" 
         },
         false
+       
     ) 
     
-    
+    // window.location.href = "login.html";
     // btnCrearCuenta.addEventListener("click", function(event) {
     //event.preventDefault();
 
