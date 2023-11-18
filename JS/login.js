@@ -1,8 +1,10 @@
-
+const forms = document.querySelectorAll('.needs-validation')
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('formLogin');
+
     
     form.addEventListener('submit', function(event) {
+        form.classList.add('was-validated') 
         event.preventDefault();
 
         const email = document.getElementById('inputEmaillogin').value;
@@ -16,16 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (validarCredenciales(email, password)) {
             window.location.href = 'index.html';
-        } else {
-            alertValidaciones.innerHTML+="El usuario no está registrado o la contraseña es incorrecta.<br/>";
-            alertValidaciones.style.display="block"; 
-        }
+        } 
 
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
 
-        alertValidaciones1.innerHTML+="Inicio de sesion <strong>exitoso</strong>, ¡Bienvenid@!<br/>";
-        alertValidaciones1.style.display="block"; 
     });
 });
 
