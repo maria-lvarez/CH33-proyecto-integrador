@@ -1,92 +1,114 @@
-let footer=document.getElementById("footer");
+let footer=document.getElementById("footer-bazar");
 
-//Primer div
-let divContainer2 = document.createElement("div");
-divContainer2.classList.add ("icons");
-divContainer2.classList.add ("container-fluid");
-divContainer2.classList.add ("col-sm-12");
-divContainer2.classList.add ("col-md-3");
-divContainer2.classList.add ("col-lg-3");
-footer.append(divContainer2);//contenedor fluido
+//Primer ul
+let ul1 = document.createElement("ul");
+ul1.classList.add ("nav");
+ul1.classList.add ("col-xs-12");
+ul1.classList.add ("col-sm-12");
+ul1.classList.add ("col-md-4");
+ul1.classList.add ("col-lg-3");
+ul1.classList.add ("d-flex");
+ul1.classList.add ("justify-content-center");
+ul1.classList.add ("align-items-center");
+footer.append(ul1);
 
-//div icons
+//icons
+
+let li30 = document.createElement("li");
+ul1.append(li30);
 
 //icon whatsApp
 let a4 = document.createElement("a");
 a4.href="#";
-divContainer2.append(a4);
+li30.append(a4);
 
 let i1 = document.createElement("i");
 i1.classList.add("bi");
 i1.classList.add("bi-whatsapp");
+i1.classList.add("icon-footer");
 a4.append(i1);
 
 //icon facebook
+
+let li31 = document.createElement("li");
+ul1.append(li31);
+
 let a5 = document.createElement("a");
 a5.href="#";
-divContainer2.append(a5);
+li31.append(a5);
 
 let i2 = document.createElement("i");
 i2.classList.add("bi");
 i2.classList.add("bi-facebook");
+i2.classList.add("icon-footer");
 a5.append(i2);
 
 //icon IG
+let li32 = document.createElement("li");
+ul1.append(li32);
+
 let a6 = document.createElement("a");
 a6.href="#";
-divContainer2.append(a6);
+li32.append(a6);
 
 let i3 = document.createElement("i");
 i3.classList.add("bi");
 i3.classList.add("bi-instagram");
+i3.classList.add("icon-footer");
 a6.append(i3);
 
 
-//segundo div
-let divFAQ = document.createElement("div");
-divFAQ.classList.add ("FAQ");
-divFAQ.classList.add ("container-fluid");
-divFAQ.classList.add ("col-sm-12");
-divFAQ.classList.add ("col-md-6");
-divFAQ.classList.add ("col-lg-6");
-footer.append(divFAQ);//contenedor fluido
+//segundo ul
+let ul2 = document.createElement("ul");
+ul2.classList.add ("nav");
+ul2.classList.add ("col-xs-12");
+ul2.classList.add ("col-sm-12");
+ul2.classList.add ("col-md-5");
+ul2.classList.add ("col-lg-6");
+ul2.classList.add ("d-flex");
+ul2.classList.add ("justify-content-around");
+ul2.classList.add ("align-items-center");
+footer.append(ul2);
 
-//div FAQ
 //Contáctanos
+let li33 = document.createElement("li");
+ul2.append(li33);
+
 let a7 = document.createElement("a");
-a7.class= "footer";
-// a4.class ="footer";
+a7.classList.add("words-footer"); //a7.class = "words-footer;"
 a7.href="./contacto.html";
 a7.innerText = "Contáctanos";
-divFAQ.append(a7);
+li33.append(a7);
 
 //FAQ
+let li34 = document.createElement("li");
+ul2.append(li34);
+
 let a8 = document.createElement("a");
-a8.class ="footer";
+a8.classList.add("words-footer");//a8.class ="words-footer";
 a8.href="./FAQ.html";
 a8.innerText = "FAQ";
-divFAQ.append(a8);
+li34.append(a8);
 
 //Avisos de privacidad
+let li35 = document.createElement("li");
+ul2.append(li35);
+
 let a9 = document.createElement("a");
-a9.class = "footer";
+a9.classList.add("words-footer");//a9.class = "words-footer";
 a9.href="#";
 a9.innerText = "Avisos de privacidad";
-divFAQ.append(a9);
+li35.append(a9);
 
-//tercer div
-
-let divGran = document.createElement("div");
-divGran.classList.add ("gran");
-divGran.classList.add ("container-fluid");
-divGran.classList.add ("col-sm-12");
-divGran.classList.add ("col-md-3");
-divGran.classList.add ("col-lg-3");
-footer.append(divGran);//contenedor fluido
-
-
+//@2023 El Gran Bazar
 let p = document.createElement("p");
-p.classList.add("granBazar");
-p.classList.add("text-end");
+p.id="granBazar";
+p.classList.add("col-xs-12");
+p.classList.add ("col-sm-12");
+p.classList.add ("col-md-3");
+p.classList.add ("col-lg-3");
+p.classList.add ("d-flex");
+p.classList.add ("justify-content-center");
+p.classList.add ("align-items-end");
 p.innerText = "@2023 El Gran Bazar";
-divGran.prepend(p);
+footer.append(p);
