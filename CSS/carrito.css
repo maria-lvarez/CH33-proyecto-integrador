@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+.product-image {
+    width: 50px;
+    height: auto;
+}
+
+.boton-fin-comp {
+    background-color: #83764C;
+    color: white;
+    
+}
+.btn-con{
+    background-color: #AE5543;
+    color: aliceblue;
+}
+
+.boton-add-cupn  {
+    background-color: #AE5543;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10;
+}
+.txt-aviso {
+    background-color: #F7BB75;
+    }
+
+#promo-code-form {
+    display: flex;
+    align-items: center;
+}
+
+#promo-code-form input {
+    margin-right: 10px;
+}
+
+#cart-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container {
+    position: relative;
+    min-height: 100vh; 
+    padding-bottom: 60px; 
+    min-height: 100vh; 
+}

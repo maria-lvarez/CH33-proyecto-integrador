@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+.price {
+    border-bottom: 2px solid #69443C;
+}
+.container {
+    position: relative;
+    min-height: 100vh; 
+    padding-bottom: 60px; 
+    min-height: 100vh; 
+}
+.btn-love {
+    margin-left:-120px;
+  }
+.payment-policy-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.payment-info, .policy-changes {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.text {
+    text-align: right;
+}
+
+/*.txt-pol{
+ 
+}*/
+.boton-add{
+    background-color: #8A2F2E;
+    color: #F7BB75; 
+    border-color:#8A2F2E;
+}

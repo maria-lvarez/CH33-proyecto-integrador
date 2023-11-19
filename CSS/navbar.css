@@ -1,31 +1,69 @@
+
 /*navbar*/
+#navbar{
+    height:10rem;   
+}  
 
-
-nav{
-    height:10rem;
+/*navbar*/
+#palabras {
+    color: #83764C;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+/*Manipular la cajita del input de buscar*/
+input.form-control.me-2{
+    border-color:#83764C;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 0;
+    width: 8rem;
 }
 
-.navbar-collapse {
-    /* background-color: aqua;*/
-    flex-basis: 100%;
-    flex-grow: 0.2;
-    align-items: center;
-}
-
-
-/*icono de la lupita */
-.bi-cart3{
+/*Input de buscar y lupita tamaño*/
+#lupita{
     font-size: 2rem;
     color:#83764C;
-    margin-right: 1rem;
+    margin-left: 0;
+} 
+
+/*color de Buscar*/
+.form-control::placeholder{
+    color: #83764C;
+}
+
+/*Remueve el color verde bandera que por default trae el boton al hacer click en el para buscar*/
+#btn-lupita {
+    --bs-btn-color: none;
+    --bs-btn-border-color:none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color: none;
+    --bs-btn-disabled-color: none;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color:none;
     margin-bottom: 1rem;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-/*icono de la lupita */
-.bi-cart3{
-    padding-bottom: 1rem;
+/*icono de carrito */
+#carrito{
     font-size: 2rem;
     color:#83764C;
-    margin: 1rem;
-
 }
+/*Espacio entre los elementos del navbar*/
+#ul-nav li{
+    margin-left: 1rem;
+    margin-right: 1rem;
+} 
+/*Llevar el navbar a la derecha segun se cambié de dispositivos móbiles*/
+#navbarNavAltMarkup{
+    justify-content: end;
+}
+
+
+
+
+

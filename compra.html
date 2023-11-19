@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comprar</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/LogoSinFondo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--CSS Navbar-->
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <!--CSS Footer-->
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/compra.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-md"></nav>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="./src/images/lp.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>Bohemian Rhapsody</h2>
+                <p class="sku">SKU: 279293</p>
+                <p class="price mt-2">$600.00 MXN</p>
+                <p class="description mt-2">Edición increíble de uno de los temas más icónicos del rock...</p>
+
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <input type="number" id="quantity" class="form-control" value="1">
+                    </div>
+                    <div class="col">
+                        <a href="carrito.html" class="btn boton-add" onclick="addToCart()">Agregar al Carrito</a>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-love"><i class="bi bi-heart-fill"></i></button>
+                    </div>
+                </div>
+
+
+<div class="payment-policy-container">
+      
+        <div class="payment-info">
+                
+            <img src="./src/images/pagos.png" alt="Payment Icon" class="icon" width="70px" height="70px">
+            <div class="text">
+                <h4>Paga hasta en tres cuotas sin interés</h4>
+                <p>Paga con tu tarjeta de débito, transferencia o crédito</p>
+            </div>
+        </div>
+       
+        <div class="policy-changes">
+            <img src="./src/images/cambios.png" alt="Changes Icon" class="icon" width="60px" height="60px">
+            <div class="text">
+                <h4 class="txt-pol">Políticas de Cambios</h4>
+                <p>Hasta 5 días hábiles para cambio de productos</p>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="footer-bazar" class="container-flex row">
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./JS/navbar3.js"></script>
+    <script src="./JS/footer.js" defer> </script>
+    <script src="./JS/carrito.js"></script>
+
+    <script src="./JS/categorias.js" defer></script>
+
+</body>
+
+</html>

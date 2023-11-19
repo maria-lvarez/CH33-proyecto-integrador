@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
 /*banner*/
 .banner-img{
     background-image: url(https://img.freepik.com/fotos-premium/collection-of-vintage-clothing-items-on-clothing-rack_933496-189.jpg);
@@ -28,3 +31,14 @@
 }
 
 /*botones*/
+#btnCarritoCard{
+    border-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #5E1F28;
+}
+
+#btnComprarCard{
+    background-color: #5E1F28;
+    border-radius: 0.5rem;
+    color: #fff;
+}

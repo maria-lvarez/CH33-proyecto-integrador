@@ -1,5 +1,5 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
 *{
     margin: 0;
@@ -20,7 +20,7 @@ html{font-size: 16px;};
 } 
 /*Imagenes de personas*/
 
-.container {
+.containerNosotras {
     border-radius: 50%;
     height: 312px;
     -webkit-tap-highlight-color: transparent;
@@ -139,3 +139,16 @@ html{font-size: 16px;};
     font-style: 10px;
 
 }
+
+/*.zoom {
+    padding: 50px;
+
+
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) 
+  }*/

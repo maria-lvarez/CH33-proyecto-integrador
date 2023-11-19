@@ -10,6 +10,7 @@ let txtEnvio= document.getElementById("inputFormEnvio");
 
 
 let btnEnviarForm = document.getElementById("btn-enviar-form");
+let btnClear = document.getElementById("btnClear");
 
 let terminos1 = document.getElementById("terminos1");
 let terminos2 = document.getElementById("terminos2");
@@ -18,10 +19,14 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 
 let cardsForm = document.getElementById("cardsForm");
 
+let txtImg= document.getElementById("img-product");
+
+//imagen para cargar
+let imagen = document.querySelector('#img-product');
 
 
 //Arreglo que va a almacena los elementos de mi tabla
-let datos = []; 
+datos = JSON.parse(localStorage.getItem("datos")) || [];
 
 function validarCategoria(){
 
@@ -104,7 +109,13 @@ function validarTerminos2(){
     }
 }//validarTerminos2
 
-
+function validarImagen() {
+    if (imagen.src.trim() === '') {
+        return false;
+    } else {
+        return true;
+    }
+}//ValidarImagen
 
 btnEnviarForm.addEventListener("click", function(event){
 
@@ -124,6 +135,7 @@ btnEnviarForm.addEventListener("click", function(event){
     txtEnvio.style = "";
     terminos1.style = "";
     terminos2.style = "";
+    imagen.style = "";
 
 
     if(txtProducto.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
@@ -208,71 +220,103 @@ btnEnviarForm.addEventListener("click", function(event){
         isValid = false;
     }//If ! validarterminos1
 
+    if (!validarImagen()){
+        alertValidaciones.innerHTML+="El campo <strong> Imagen del producto </strong> es requerido <br/>";
+        alertValidaciones.style.display="block";
+        isValid = false;
+    }//If ! validarImagen
+
+
+    //Boton de la imagen para cargar
+    
+    let myWidget = cloudinary.createUploadWidget({
+        cloudName: 'dvdf3ncs2', 
+        uploadPreset: 'ElGranBazar',
+        folder: 'widgetUpload', 
+        cropping: true
+    }, (error, result) => { 
+        if (!error && result && result.event === "success") { 
+            console.log('Imagen subida con éxito: ', result.info); 
+            imagen.src = result.info.secure_url;
+        }
+    });
+
+    document.getElementById("upload_widget").addEventListener("click", function(){
+        myWidget.open();
+    }, false);
+
 
     //JSON
-
     if(isValid){ //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
 
 
-        let elemento = `{"name" : "${txtProducto.value}",
-                            "categoria" : "${txtCategoria.value}",
-                            "price" : "${txtPrecio}"
-                        }`;
+            let elemento = {name : txtProducto.value,
+            img:  imagen.src,
+            categoria : txtCategoria.value,
+            precio : txtPrecio.value,
+            };
 
 
-            //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
-            datos.push(JSON.parse(elemento));
-            //Guardar mi arreglo en el local storage
-            localStorage.setItem("datos", JSON.stringify(datos)); //Convierte los alementos de mi array en string
+        //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
+        datos.push((elemento));
+        //Guardar mi arreglo en el local storage
+        localStorage.setItem("datos", JSON.stringify(datos)); //Convierte los alementos de mi array en string
 
 
-        //Para crear un elemento
+        window.location.href = "electrodomesticos.html";
 
-
-
-      /*  
-        const products = [
-            { id: 1, name: 'Batidora 5 Vel', price: 600.00, image: 'src/images/batidora.jpeg' },
-            { id: 2, name: 'Ajedrez clasico', price: 800.00, image: 'src/images/ajedrez.jpeg'},
-            { id: 3, name: 'Tostadora vintage', price: 500.00, image: 'src/images/electrodomesticos.jpg'},
-            
-        ];
-
-        function addToCart(name, img, categoria, price) {
-            const product = products.find(p => p.id === productId);
-            if (product) {
-                const cartItem = cart.find(item => item.id === productId);
-                if (cartItem) {
-                    cartItem.quantity += quantity;
-                } else {
-                    cart.push({ ...product, quantity });
-                }
-            }
-            renderCart();
-        }
-
-        function renderCart() {
-            const cartTableBody = document.getElementById('cart-table').querySelector('tbody');
-            cartTableBody.innerHTML = ''; 
-            let total = 0;
-            cart.forEach(item => {
-                const totalPrice = item.price * item.quantity;
-                total += totalPrice;
-                cartTableBody.innerHTML += `
-                    <tr>
-                        <td><img src="${item.image}" class="product-image" alt="${item.name}" /></br> ${item.name}</td>
-                        <td>$${item.price.toFixed(2)} MXN</td>
-                        <td>${item.quantity}</td>
-                        <td>$${totalPrice.toFixed(2)} MXN</td>
-                        <td>
-                            <button class="btn btn-sm" onclick="removeFromCart(${item.id})">
-                            <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                `;
-            });
-            document.getElementById('cart-total').innerText = `$${total.toFixed(2)} MXN`;
-        }*/
     } //isValid
+
+
 });//btnEnviar.addEventListener
+
+
+//Limpiar los campos
+btnClear.addEventListener("click", function(event){
+    event.preventDefault();
+    alertValidaciones.innerHTML="";
+    alertValidaciones.style.display="none";
+    txtProducto.style = "";
+    txtCategoria.style = "";
+    txtEstado.style = "";
+    txtDescripcion.style = "";
+    txtPrecio.style = "";
+    txtTel.style = "";
+    txtDireccion.style = "";
+    txtCP.style = "";
+    txtEnvio.style = "";
+    terminos1.style = "";
+    terminos2.style = "";
+
+    txtProducto.value = "";
+    txtCategoria.value = "";
+    txtEstado.value = "";
+    txtDescripcion.value = "";
+    txtPrecio.value = "";
+    txtTel.value = "";
+    txtDireccion.value = "";
+    txtCP.value= "";
+    txtEnvio.value= "";
+    terminos1.value = "";
+    terminos2.value= "";
+    
+
+});//btnClear.addEventListener
+
+
+//Boton de la imagen para cargar
+// let myWidget = cloudinary.createUploadWidget({
+//     cloudName: 'dvdf3ncs2', 
+//     uploadPreset: 'ElGranBazar',
+//     folder: 'widgetUpload', 
+//     cropping: true
+//   }, (error, result) => { 
+//     if (!error && result && result.event === "success") { 
+//         console.log('Imagen subida con éxito: ', result.info); 
+//         imagen.src = result.info.secure_url;
+//      }
+// });
+
+// document.getElementById("upload_widget").addEventListener("click", function(){
+//     myWidget.open();
+//   }, false);
