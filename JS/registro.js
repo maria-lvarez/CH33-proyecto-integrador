@@ -11,7 +11,7 @@ let btnClear = document.getElementById("btnClear");
 
 
 //Arreglo que va a almacena los elementos de mi tabla
-const forms = document.querySelectorAll('.needs-validation')
+const forms = document.getElementsByClassName('.needs-validation')
 datos = JSON.parse(localStorage.getItem("datos")) || [];
 
 function validarNombre(){
@@ -42,11 +42,12 @@ function validarPassword(){
 }//validarPassword 
 function validarPasswordConf(){
 
-    if (txtPassword.value && txtConfPassword === txtPassword) {
+    if (txtPassword.value && txtConfPassword.value === txtPassword.value) {
         return true
     }else{
         return false;
     }
+    
 }//validarPassword 
 
 
