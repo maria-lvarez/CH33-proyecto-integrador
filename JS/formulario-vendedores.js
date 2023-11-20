@@ -226,26 +226,6 @@ btnEnviarForm.addEventListener("click", function(event){
         isValid = false;
     }//If ! validarImagen
 
-
-    //Boton de la imagen para cargar
-    
-    let myWidget = cloudinary.createUploadWidget({
-        cloudName: 'dvdf3ncs2', 
-        uploadPreset: 'ElGranBazar',
-        folder: 'widgetUpload', 
-        cropping: true
-    }, (error, result) => { 
-        if (!error && result && result.event === "success") { 
-            console.log('Imagen subida con éxito: ', result.info); 
-            imagen.src = result.info.secure_url;
-        }
-    });
-
-    document.getElementById("upload_widget").addEventListener("click", function(){
-        myWidget.open();
-    }, false);
-
-
     //JSON
     if(isValid){ //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
 
@@ -305,18 +285,18 @@ btnClear.addEventListener("click", function(event){
 
 
 //Boton de la imagen para cargar
-// let myWidget = cloudinary.createUploadWidget({
-//     cloudName: 'dvdf3ncs2', 
-//     uploadPreset: 'ElGranBazar',
-//     folder: 'widgetUpload', 
-//     cropping: true
-//   }, (error, result) => { 
-//     if (!error && result && result.event === "success") { 
-//         console.log('Imagen subida con éxito: ', result.info); 
-//         imagen.src = result.info.secure_url;
-//      }
-// });
+let myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dvdf3ncs2', 
+    uploadPreset: 'ElGranBazar',
+    folder: 'widgetUpload', 
+    cropping: true
+  }, (error, result) => { 
+    if (!error && result && result.event === "success") { 
+        console.log('Imagen subida con éxito: ', result.info); 
+        imagen.src = result.info.secure_url;
+     }
+});
 
-// document.getElementById("upload_widget").addEventListener("click", function(){
-//     myWidget.open();
-//   }, false);
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
