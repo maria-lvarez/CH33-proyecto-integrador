@@ -11,7 +11,7 @@ let btnClear = document.getElementById("btnClear");
 
 
 //Arreglo que va a almacena los elementos de mi tabla
-const forms = document.querySelectorAll('.needs-validation')
+const forms = document.getElementsByClassName('.needs-validation')
 datos = JSON.parse(localStorage.getItem("datos")) || [];
 
 function validarNombre(){
@@ -42,11 +42,12 @@ function validarPassword(){
 }//validarPassword 
 function validarPasswordConf(){
 
-    if (txtPassword.value && txtConfPassword === txtPassword) {
+    if (txtPassword.value && txtConfPassword.value === txtPassword.value) {
         return true
     }else{
         return false;
     }
+    
 }//validarPassword 
 
 
@@ -63,11 +64,12 @@ function validarTelefono(){
 
 
 btnCrearCuenta.addEventListener("click", function(event){
+    event.preventDefault();
     form.classList.add('was-validated') 
 
     let isValid = true;
 
-    event.preventDefault();
+    
     alertValidaciones.innerHTML="";
     alertValidaciones.style.display="none";
     txtNombre.style = "";
@@ -80,16 +82,19 @@ btnCrearCuenta.addEventListener("click", function(event){
     if(txtNombre.value.length < 2){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         
         isValid = false;
+        return;
     }//txtNombre
 
 
     if(! validarCorreo()){
         isValid = false;
+        return;
     }//If ! validarCategoria
 
 
     if(! validarPassword()){
         isValid = false;
+        return;
     }//If ! validarEstado
 
 
@@ -103,6 +108,7 @@ btnCrearCuenta.addEventListener("click", function(event){
 
     if(! validarTelefono()){
         isValid = false;
+        return;
     }//If ! validarTelefono
 
 
@@ -130,9 +136,9 @@ btnCrearCuenta.addEventListener("click", function(event){
         alertValidaciones1.innerHTML+="El registro <strong>fue exitoso</strong>, ¡Bienvenid@!<br/>";
         alertValidaciones1.style.display="block"; //Convierte los alementos de mi array en string
 
-
-        window.location.href = "login.html";
+        
+        
 
     } //isValid
-
+    if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}
 });//btnEnviar.addEventListener

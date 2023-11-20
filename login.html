@@ -37,25 +37,32 @@
       
       <div class="container bg-white p-4 rounded-5 justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-6 my-5" id="cuerpologin">
         <h2 class="fw-bold py-2 mt-4">Inicio de sesión</h2>
-        <form class="needs-validation" id="formLogin">
+        <form class="needs-validation" novalidate id="formLogin">
           <div class="form-group col-sm-12 col-md-12 col-lg-12 justify-content-center mb-3 mt-5 formaflotante">
             <label for="inputEmaillogin" class="form-label" >Introduce tu correo electrónico</label>
-
-                <input type="email" class="form-control registroDatos" id="inputEmaillogin" aria-describedby="emailHelp" placeholder="Ejemplo:elgranbazar@gmail.com" required >
+                <input type="email" class="form-control registroDatos" id="inputEmaillogin" aria-describedby="emailHelp" placeholder="Ejemplo:elgranbazar@gmail.com" required pattern="^([\-\.a-zA-Z0-9]+)@([\-\.a-zA-Z0-9]+)\.([a-zA-Z]){2,7}$" >
+                <div class="valid-feedback">
+                  Correo válido
+                </div>
+                <div class="invalid-feedback">
+                  El campo <strong>correo</strong> es necesario.
               
-              <!--<i class="bi bi-person" id="personita"></i>-->  
             
           </div>
           <div class="form-group col-sm-12 col-md-12 col-lg-12 mb-3 formaflotante">
             <label for="inputPasswordlogin" class="form-label">Contraseña</label>
-            <input type="password" class="form-control registroDatos" id="inputPasswordlogin" placeholder="Introduce tu contraseña"  required>
-            
+            <input type="password" class="form-control registroDatos" id="inputPasswordlogin" placeholder="Introduce tu contraseña"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <div class="valid-feedback">
+              Contraseña válida.
+            </div>
+            <div class="invalid-feedback" id="mensajecontr">
+              Debe contener mínimo un número, una letra mayúscula y una minúscula, al menos 8 o más carácteres.
+            </div>
             <a href="" id="passwordHelp" class="form-text">¿Olvidaste tu contraseña?</a>
           </div>
           
           <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            
+            <input type="checkbox" class="form-check-input" id="exampleCheck1"> 
             <label class="form-check-label form-text" for="exampleCheck1">Recordarme</label>
           </div>
 

@@ -19,7 +19,7 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 
 let cardsForm = document.getElementById("cardsForm");
 
-let txtImg= document.getElementById("img-product");
+let txtImg= document.getElementById("img-product"); //esto no se está utilizando
 
 //imagen para cargar
 let imagen = document.querySelector('#img-product');
@@ -220,7 +220,8 @@ btnEnviarForm.addEventListener("click", function(event){
         isValid = false;
     }//If ! validarterminos1
 
-    if (!validarImagen()){
+
+    if (! validarImagen()){
         alertValidaciones.innerHTML+="El campo <strong> Imagen del producto </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         isValid = false;
