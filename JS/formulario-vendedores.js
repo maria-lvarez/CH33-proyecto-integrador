@@ -74,13 +74,14 @@ function validarPrecio(){
 }//ValidarPrecio
 
 function validarTelefono(){
-    if(txtTel.value.length ===10){
+    let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
+    if(validTel.test(txtTel.value)){
         return true;
     }
     else {
         return false;
     }
-}//ValidarCantidad
+}//ValidarTelefono
 
 
 function validarCP() { 

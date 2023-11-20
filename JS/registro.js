@@ -6,12 +6,12 @@ let txtConfPassword = document.getElementById("InputPasswordConf");
 
 
 
-let btnCrearcuenta = document.getElementById("btnCrearCuenta");
+let btnCrearCuenta = document.getElementById("btnCrearCuenta"); 
 let btnClear = document.getElementById("btnClear");
 
 
 //Arreglo que va a almacena los elementos de mi tabla
-const forms = document.getElementsByClassName('.needs-validation')
+//const forms = document.getElementsByClassName('.needs-validation')
 datos = JSON.parse(localStorage.getItem("datos")) || [];
 
 function validarNombre(){
@@ -21,7 +21,7 @@ function validarNombre(){
     }else{
         return false;
     }
-}//validarNombre
+}//validarNombre 
 
 
 function validarCorreo(){
@@ -96,14 +96,6 @@ btnCrearCuenta.addEventListener("click", function(event){
         isValid = false;
         return;
     }//If ! validarEstado
-
-
-    /*if(! validarPasswordConf()){
-        alertValidaciones.innerHTML+="La contraseña <strong> es incorrecta </strong>o no coincide <br/>";
-        alertValidaciones.style.display="block";
-        txtConfPassword.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarCategoria*/
 
 
     if(! validarTelefono()){
