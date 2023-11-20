@@ -1,48 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Login</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="./src/images/LogoSinFondo2.png">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS-->
 
-        <!--Favicon-->
-        <link rel="icon" type="image/x-icon" href="./src/images/LogoSinFondo2.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="./CSS/login.css"></link>
+
+    <!--CSS Navbar-->
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <!--CSS Navbar-->
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <!--Iconos Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        <!--CSS Navbar-->
-        <link rel="stylesheet" href="./CSS/navbar.css">
-         <!--CSS Footer-->
-         <link rel="stylesheet" href="./CSS/footer.css">
     
-    </head>
-    <body>
-        <header>
-                <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary"></nav>
-        </header>
-<body>
+  </head>
+  <body id="bodyLogin">
     <nav id="navbar" class="navbar navbar-expand-md">
-
     </nav>
 
+    <section id="sectionLogin" class="p-5">
 
+              <!--Validaciones--> 
+      <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <p id="Validaciones-envio"></p>
+        </div>
+          <div class="alert alert-success fade show" style="display:none;" role="alert" id="alertValidaciones1">
+            <p id="Validaciones-envio"></p>
+        </div>
 
+      
+      <div class="container bg-white p-4 rounded-5 justify-content-center col-xs-6 col-sm-6 col-md-6 col-lg-6 my-5" id="cuerpologin">
+        <h2 class="fw-bold py-2 mt-4">Inicio de sesión</h2>
+        <form class="needs-validation" id="formLogin">
+          <div class="form-group col-sm-12 col-md-12 col-lg-12 justify-content-center mb-3 mt-5 formaflotante">
+            <label for="inputEmaillogin" class="form-label" >Introduce tu correo electrónico</label>
 
+                <input type="email" class="form-control registroDatos" id="inputEmaillogin" aria-describedby="emailHelp" placeholder="Ejemplo:elgranbazar@gmail.com" required >
+              
+              <!--<i class="bi bi-person" id="personita"></i>-->  
+            
+          </div>
+          <div class="form-group col-sm-12 col-md-12 col-lg-12 mb-3 formaflotante">
+            <label for="inputPasswordlogin" class="form-label">Contraseña</label>
+            <input type="password" class="form-control registroDatos" id="inputPasswordlogin" placeholder="Introduce tu contraseña"  required>
+            
+            <a href="" id="passwordHelp" class="form-text">¿Olvidaste tu contraseña?</a>
+          </div>
+          
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            
+            <label class="form-check-label form-text" for="exampleCheck1">Recordarme</label>
+          </div>
+
+          <div class="text-center">
+          <button type="submit" class="btn mb-3 justify-content-center" id="btnIniciarSesión">Iniciar Sesión</button>
+          </div>
+          <hr>
+          <div>
+          <span class="form-text text-center">¿No tienes cuenta? <a href="./Registro.html">Regístrate</a></div>  
+          </form>
+      
+          
+       <!--Login con redes sociales-->
+       <div class="container w-100 my-5 ">
+        <div class="row text-center">
+          <span class="col-12">O inicia sesión con</span>
+        </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-primary w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2">
+                    <img src="./src/images/facebook.avif" width="32">
+                  </div>
+                  <div class="col-10">
+                    Facebook
+                  </div>
+
+                </div>
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-danger w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2">
+                    <img src="./src/images/google.png" width="32">
+                  </div>
+                  <div class="col-10">
+                    Google
+                  </div>
+
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> 
+           
+    </section>
     <footer id="footer" class="navbar navbar-expand-lg"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-<script src="./JS/navbar3.js"></script>
-<script src="./JS/footer.js" defer> </script>
-</body>
+    <!--Scripts-->
+
+    <script src="./JS/login.js"></script>
+
+  <!--<script src="./JS/Registro copy no se toca.js"></script>--->  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./JS/navbar3.js"></script>
+    <script src="./JS/footer.js" defer> </script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-let txtName = document.getElementById("InputNombreComp");
+/*let txtName = document.getElementById("InputNombreComp");
 let txtCorreo = document.getElementById("InputCorreo");
 let txtTelefono = document.getElementById("InputTelReg");
 let txtContraseña = document.getElementById("InputPasswordReg");
@@ -59,4 +59,4 @@ const forms= document.querySelectorAll('.needs-validation')
     
 }});
 
-console.log ()
+console.log ()*/

@@ -1,4 +1,4 @@
-// Pueden cambiar sin problema estos let por const, si en algun punto sin querer quieren reasignar el valor o cambiarlo es mas probable que lo detecten con el const que con let
+/*// Pueden cambiar sin problema estos let por const, si en algun punto sin querer quieren reasignar el valor o cambiarlo es mas probable que lo detecten con el const que con let
 // despues de cada getElementById hagan un console.log del value a 
 // let txtName = document.getElementById("InputNombreComp").value;
 // let txtCorreo = document.getElementById("InputCorreo").value;
@@ -10,6 +10,7 @@
 // let validFeedback = document.getElementsByClassName("valid-feedback");
 
 // Igual aqui -> const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+let form= document.getElementById("form")
 let usuarios=[]
 usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
@@ -76,11 +77,14 @@ Array.from(forms).forEach(form => {
                     }
                 }    
             }
+        
+            // window.location.href = "login.html" 
         },
         false
+       
     ) 
     
-    
+    // window.location.href = "login.html";
     // btnCrearCuenta.addEventListener("click", function(event) {
     //event.preventDefault();
 
@@ -111,4 +115,4 @@ Array.from(forms).forEach(form => {
     // }
 });
 
-//Alert
+//Alert*/

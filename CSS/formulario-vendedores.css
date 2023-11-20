@@ -30,7 +30,7 @@
      text-align: center;
  }
  .formulario-bo{
-     border-color:#8A2F2E;
+     border-color:#83764C;
  }
  .acordion-cerrado{
     background-color: #8A2F2E;
@@ -76,11 +76,13 @@
  .btn-enviar-izq:hover{
      background-color: #F7BB75;
  }
+
  /* estilos de imagenes de pie de pagina*/
  img.img-fondo{
      display: block;
      filter:  brightness(50%) blur(.08rem);
      height: 20rem;
+     width: 100%;
  }
  
  img-fondo{
