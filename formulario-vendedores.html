@@ -1,299 +1,205 @@
-let txtProducto = document.getElementById("inputFormProducto");
-let txtCategoria = document.getElementById("inputFormCategoria");
-let txtEstado = document.getElementById("inputFormEstado");
-let txtDescripcion = document.getElementById("inputFormDescripcion");
-let txtPrecio = document.getElementById("inputFormPrecio");
-let txtTel = document.getElementById("inputFormTel");
-let txtDireccion = document.getElementById("inputFormDireccion");
-let txtCP = document.getElementById("inputFormCP");
-let txtEnvio= document.getElementById("inputFormEnvio");
-
-
-let btnEnviarForm = document.getElementById("btn-enviar-form");
-let btnClear = document.getElementById("btnClear");
-
-let terminos1 = document.getElementById("terminos1");
-let terminos2 = document.getElementById("terminos2");
-
-let alertValidaciones = document.getElementById("alertValidaciones");
-
-let cardsForm = document.getElementById("cardsForm");
-
-//imagen para cargar
-let imagen = document.querySelector('#img-product');
-
-
-//Arreglo que va a almacena los elementos de mi tabla
-datos = JSON.parse(localStorage.getItem("datos")) || [];
-
-function validarCategoria(){
-
-    if (txtCategoria.value) {
-        return true
-    }else{
-        return false;
-    }
-}//validarCategoria 
-
-
-
-function validarEstado(){
-    if (txtEstado.value) {
-        return true
-    }else{
-        return false;
-    }
-}//validarEstado
-
-function validarEnvio(){
-
-    if (txtEnvio.value) {
-        return true
-    }else{
-        return false;
-    }
-}//validarCategoria 
-
-
-function validarPrecio(){
-    if(txtPrecio.value.length ==0){
-        return false;
-    }//if length
-
-    if(isNaN(txtPrecio.value)){
-        return false;
-    }//isNaN
-
-    if(parseFloat(txtPrecio.value)<=0){
-        return false;
-    }//parseFloat
-
-    return true;
-}//ValidarPrecio
-
-function validarTelefono(){
-    if(txtTel.value.length ===10){
-        return true;
-    }
-    else {
-        return false;
-    }
-}//ValidarCantidad
-
-
-function validarCP() { 
-    let re = /^[0-9]{5}$/;
-   if (re.test(txtCP.value)){
-       return true;
-   }
-   else {
-       return false;
-   }
-}//validarCP
-
-function validarTerminos1(){
-    if (terminos1.checked) {
-        return true
-    }else{
-        return false;
-    }
-}//validarTerminos1
-
-function validarTerminos2(){
-    if (terminos2.checked) {
-        return true
-    }else{
-        return false;
-    }
-}//validarTerminos2
-
-function validarImagen() {
-    if (imagen.src.trim() === '') {
-        return false;
-    } else {
-        return true;
-    }
-}//ValidarImagen
-
-btnEnviarForm.addEventListener("click", function(event){
-
-    let isValid = true;
-
-    event.preventDefault();
-    alertValidaciones.innerHTML="";
-    alertValidaciones.style.display="none";
-    txtProducto.style = "";
-    txtCategoria.style = "";
-    txtEstado.style = "";
-    txtDescripcion.style = "";
-    txtPrecio.style = "";
-    txtTel.style = "";
-    txtDireccion.style = "";
-    txtCP.style = "";
-    txtEnvio.style = "";
-    terminos1.style = "";
-    terminos2.style = "";
-
-
-    if(txtProducto.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        alertValidaciones.innerHTML="El campo <strong> producto </strong> es requerido <br/> ";
-        alertValidaciones.style.display="block"; //block o inline para que lo muestre
-        txtProducto.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
-        isValid = false;
-    }//txtProducto<3
-
-
-    if(! validarCategoria()){
-        alertValidaciones.innerHTML+="El campo <strong> categoría </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        txtCategoria.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarCategoria
-
-
-    if(! validarEstado()){
-        alertValidaciones.innerHTML+="El campo <strong> estado </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        txtEstado.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarEstado
-
-
-    if(! validarEnvio()){
-        alertValidaciones.innerHTML+="El campo <strong> envío </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        txtEnvio.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarCategoria
-
-    if(txtDescripcion.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        alertValidaciones.innerHTML+="El campo <strong> descripción </strong> es requerido <br/> ";
-        alertValidaciones.style.display="block"; //block o inline para que lo muestre
-        txtDescripcion.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
-        isValid = false;
-    }//validar Descripción
-
-    if(! validarPrecio()){
-        alertValidaciones.innerHTML +="El campo <strong> precio </strong> es requerido <br/> ";
-        alertValidaciones.style.display="block";
-        txtPrecio.style.border = "solid thin red";
-        isValid = false;
-    }//if ! validarCanrtidad
-
-    if(! validarTelefono()){
-        alertValidaciones.innerHTML+="El campo <strong>teléfono</strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        txtTel.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarTelefono
-
-    if(txtDireccion.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        alertValidaciones.innerHTML+="El campo <strong> dirección </strong> es requerido <br/> ";
-        alertValidaciones.style.display="block"; //block o inline para que lo muestre
-        txtDireccion.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
-        isValid = false;
-    }//validar Dirección
-
-
-    if(! validarCP()){
-        alertValidaciones.innerHTML+="El campo <strong> código postal </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        txtCP.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarCP
-
-    if(! validarTerminos1()){
-        alertValidaciones.innerHTML+="El campo <strong> Acepto los terminos y condiciones </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        terminos1.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarterminos1
-
-
-    if(! validarTerminos2()){
-        alertValidaciones.innerHTML+="El campo <strong> Acepto los terminos de selección de productos </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        terminos2.style.border="solid thin red";
-        isValid = false;
-    }//If ! validarterminos1
-
-    if (!validarImagen()){
-        alertValidaciones.innerHTML+="El campo <strong> Imagen del producto </strong> es requerido <br/>";
-        alertValidaciones.style.display="block";
-        isValid = false;
-    }//If ! validarImagen
-
-    //JSON
-    if(isValid){ //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
-
-
-            let elemento = {name : txtProducto.value,
-            img:  imagen.src,
-            categoria : txtCategoria.value,
-            precio : txtPrecio.value,
-            };
-
-
-        //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
-        datos.push((elemento));
-        //Guardar mi arreglo en el local storage
-        localStorage.setItem("datos", JSON.stringify(datos)); //Convierte los alementos de mi array en string
-
-
-        window.location.href = "electrodomesticos.html";
-
-    } //isValid
-
-
-});//btnEnviar.addEventListener
-
-
-//Limpiar los campos
-btnClear.addEventListener("click", function(event){
-    event.preventDefault();
-    alertValidaciones.innerHTML="";
-    alertValidaciones.style.display="none";
-    txtProducto.style = "";
-    txtCategoria.style = "";
-    txtEstado.style = "";
-    txtDescripcion.style = "";
-    txtPrecio.style = "";
-    txtTel.style = "";
-    txtDireccion.style = "";
-    txtCP.style = "";
-    txtEnvio.style = "";
-    terminos1.style = "";
-    terminos2.style = "";
-
-    txtProducto.value = "";
-    txtCategoria.value = "";
-    txtEstado.value = "";
-    txtDescripcion.value = "";
-    txtPrecio.value = "";
-    txtTel.value = "";
-    txtDireccion.value = "";
-    txtCP.value= "";
-    txtEnvio.value= "";
-    terminos1.value = "";
-    terminos2.value= "";
-    
-
-});//btnClear.addEventListener
-
-
-//Boton de la imagen para cargar
-let myWidget = cloudinary.createUploadWidget({
-    cloudName: 'dvdf3ncs2', 
-    uploadPreset: 'ElGranBazar',
-    folder: 'widgetUpload', 
-    cropping: true
-  }, (error, result) => { 
-    if (!error && result && result.event === "success") { 
-        console.log('Imagen subida con éxito: ', result.info); 
-        imagen.src = result.info.secure_url;
-     }
-});
-
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Gran Bazar</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="./src/images/icono_head.png">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/formulario-vendedores.css">
+    <link rel="stylesheet" href="./CSS/footer.css"> 
+
+  </head>
+
+  <body  class="container-fluid">
+
+    <nav id="navbar" class="navbar navbar-expand-md">
+    </nav>
+
+<main>
+
+    <div id="bannerimg"  class="img-fluid">
+      <p id="banner-p"><strong>Vendedores</strong></p>
+  </div>
+
+<!--Alerts-->
+<div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+  <p id="alertValidacionesTexto"></p>
+</div>
+<section class="container-fluid1 p-4">
+  <div class="alert alert-success fade show" style="display:none;" role="alert" id="alertValidaciones1">
+  <p id="Validaciones-envio"></p>
+</div>
+  
+<div class=" container-fluid row g-5">
+
+  <div id="for-izq" class="col my-5">
+      <img id="img-product" src="./src/images/flat-lay-objetos-vintage-naturaleza-muerta.jpg" class="img-fluid mt-5" alt="...">
+      <div class="input-group mt-3">
+       <!-- <img id="img-product"> esta se comento para uque la imagen aparesca contenida en el recuadro de la de arriba-->
+        <!--Boton para Cargar imagen-->
+      <button id="upload_widget" class="btn btn-enviar-der mr-2 col-2" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>
+      </div><!-- agrega un archivo-->
+      <p class="mr-5 aviso-texto text-center">Si tienes dudas <a href="./contacto.html"> contáctanos </a></p>
+
+        <div class="my-3 mr-5">
+          <div class="container">
+          </div><!--div de botones-->
+      </div><!--div de pregunta -->
+      <div class="my-3 mr-5"><!--abre los acordeones-->
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item my-4">
+                <h2 class="accordion-header" >
+                  <button class="accordion-button collapsed acordion-cerrado" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Comisión por servicio
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Por cada venta generada el monto de comisión que tomamos es del 10% de el costo total neto.</div>
+                </div>
+              </div>
+              <div class="accordion-item my-4">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed acordion-cerrado" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Criterios de selección
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Nuestros colaboradores se encargan de verificar el estado de los productos para asegurarnos que se encuentran en buenas condiciones.</div>
+                </div>
+              </div>
+            </div>
+      </div><!--cierra los acordeones -->
+  </div><!--cierra el contenedor de todo el lado derecho-->
+
+    <div id="for-vendedor" class="container my-5 col">
+      <h1 class="mt-3 titulo-form">¿Qué quieres vender?</h1>
+  <div class="my-3 mr-5 ">
+      <label for="exampleFormControlInput1" class="form-label">Producto</label>
+      <input type="email" class="form-control formulario-bo" id="inputFormProducto" placeholder="Producto" required>
+    </div>
+    <div class="mb-3 mr-5">
+      <label for="inputFormCategoria" class="form-label">Categoría</label>
+      <select id="inputFormCategoria" class="form-select" required>
+        <option value="" disabled="disabled">Elige una opción</option>
+        <option value="Ropa-accesorios"selected>Ropa y accesorios</option>
+        <option value="Electrodomesticos">Electrodomésticos</option>
+        <option value="Electronicos">Electrónicos</option>
+        <option value="Entretenimiento">Entretenimiento</option>
+      </select>
+    </div>
+    <div class="mb-3 mr-5">
+      <label for="inputFormEstado" class="form-label">Estado</label>
+      <select id="inputFormEstado" class="form-select">
+        <option value="" disabled="disabled">Elige una opción</option>
+        <option value="Nuevo-etiqueta"selected>Nuevo con etiqueta</option>
+        <option value="Nuevo-sin-etiqueta">Nuevo sin etiqueta</option>
+        <option value="Seminuevo">Seminuevo</option>
+        <option value="Segunda-mano">De segunda mano</option>
+      </select>
+    </div>
+    <div class="mb-3 mr-5">
+      <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+      <textarea class="form-control formulario-bo" id="inputFormDescripcion" placeholder="Descripción" rows="3" required></textarea>
+    </div>
+    <div class="my-3 mr-5 ">
+      <label for="exampleFormControlInput1" class="form-label">Precio</label>
+      <input type="email" class="form-control formulario-bo" id="inputFormPrecio" placeholder="Precio" required>
+    </div>
+    <div class="my-3 mr-5 ">
+      <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+      <input type="email" class="form-control formulario-bo" id="inputFormTel" placeholder="Teléfono" required>
+    </div>
+    <div class="my-3 mr-5 ">
+      <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+      <input type="email" class="form-control formulario-bo" id="inputFormDireccion" placeholder="Dirección" required>
+    </div>
+    <div class="my-3 mr-5 ">
+      <label for="exampleFormControlInput1" class="form-label">Código Postal</label>
+      <input type="email" class="form-control formulario-bo" id="inputFormCP" placeholder="Código Postal" required>
+    </div>
+    <div class="mb-3 mr-5">
+      <label for="inputFormEnvio" class="form-label">Envío</label>
+      <select id="inputFormEnvio" class="form-select" required>
+        <option value="" disabled="disabled">Elige una opción</option>
+        <option value="Fedex"selected>Fedex</option>
+        <option value="Correos-de-Mexico">Correos de México</option>
+        <option value="Express"> J&T Express</option>
+        <option value="DHL">DHL</option>
+        <option value="Estafeta">Estafeta</option>
+      </select>
+    </div>
+    <!--<button id="upload_widget" class="btn btn-secondary btn-enviar-der mr-1 col-2" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>-->
+    <p class="mr-5 aviso-texto">Recuerda que los costos de envio son cubiertos por el comprador</p>
+
+    <div id="check-form" class="mr-5">
+      <div class="row">
+     <div class="col md-8"> 
+      <div class="form-check">
+          <input id="terminos1" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1" required>
+          <label class="form-check-label cubito-text" for="defaultCheck1">
+            Acepto los terminos y condiciones.
+          </label>
+        </div>
+        <div class="form-check container">
+          <input id="terminos2" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1" required>
+          <label class="form-check-label cubito-text" for="defaultCheck1">
+           Acepto los terminos de selección de productos.
+          </label>
+        </div>       
+        </div><!--clas col para checkbox-->
+        <button type="button" class="btn btn-secondary btn-enviar-der mr-2 col-2" id="btn-enviar-form">Enviar</button>
+        <button type="button" class="btn btn-secondary btn-enviar-der mr-2 col-2" id="btnClear">Limpiar</button>
+        <p class="mr-5 aviso-texto">Antes de poder publicar tu producto en la página web, tu publicación debe ser enviara a revisión donde nuestros colaboradores se encargaran de revisarla antes de aprobarla</p>
+      </div>
+     </div><!--cierre de contenedor checkbox-->
+
+    </div> <!-- forms para vendedor derecha-->
+</div><!--cierre de row-->
+
+
+<div id="img-fondo" class="row g-0">
+
+<div class="col p-container">
+  <img src="./src/images/flat-lay-objetos-vintage-naturaleza-muerta.jpg" class="img-fluid  img-fondo" alt="...">
+  <div class="centered">Vende de manera segura</div>
+  <div class="left2">Sin encuentros</div>
+</div>
+<div class="col p-container">
+  <img src="./src/images/vintage.png" class="img-fluid  img-fondo" alt="...">
+  <div class="centered">Gana dinero</div>
+  <div class="left2">Dandole una segunda vida a tus pertenencias</div>
+</div>
+<div class="col p-container">
+  <img src="./src/images/nature.png" class="img-fluid  img-fondo" alt="...">
+  <div class="centered">Ayuda al medio ambiente</div>
+  <div class="left2">Alargando el ciclo de vida de los productos</div>
+</div>
+</div><!--cierra img-fondo-->
+
+
+
+</main>
+
+<footer id="footer-bazar" class="container-flex row">
+
+</footer>
+
+
+
+       <script src="./JS/navbar3.js" defer> </script>
+       <script src="./JS/footer.js" defer> </script>
+
+        <script src="./JS/formulario-vendedores.js" defer> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <!--Script de la imagen para cargar-->
+        <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+</body>
+
+</html>
