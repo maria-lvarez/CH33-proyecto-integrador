@@ -44,7 +44,7 @@
        </div>
 
       <div class="d-flex justify-content-center">
-        <form class="needs-validation col-xs-10 col-sm-10 col-md-10 col-lg-10" novalidate id="form">
+        <form class="needs-validation col-xs-10 col-sm-10 col-md-10 col-lg-10" novalidate id="formReg">
 
           <div class="row">
             <div class="form-group col-sm-12 col-md-12 col-lg-12">
@@ -101,7 +101,7 @@
 
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputPasswordConf" class="form-label">Confirma la contraseña</label>
-              <input type="password" class="form-control registroDatos" id="InputPasswordConf" placeholder="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <input type="password" class="form-control registroDatos" id="InputPasswordConf" placeholder="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" data-match="InputPasswordReg">
               <div class="valid-feedback">
                 Contraseñas coinciden.
               </div>

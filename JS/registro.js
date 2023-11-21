@@ -1,8 +1,9 @@
-let txtNombre = document.getElementById("InputNombreComp");
-let txtCorreo = document.getElementById("InputCorreo");
-let txtTelefono = document.getElementById("InputTelReg");
-let txtPassword = document.getElementById("InputPasswordReg");
-let txtConfPassword = document.getElementById("InputPasswordConf");
+// Mover estos let
+// let txtNombre = document.getElementById("InputNombreComp");
+// let txtCorreo = document.getElementById("InputCorreo");
+// let txtTelefono = document.getElementById("InputTelReg");
+// let txtPassword = document.getElementById("InputPasswordReg");
+// let txtConfPassword = document.getElementById("InputPasswordConf");
 
 
 
@@ -11,12 +12,12 @@ let btnClear = document.getElementById("btnClear");
 
 
 //Arreglo que va a almacena los elementos de mi tabla
-const forms = document.querySelectorAll('.needs-validation')
+// const forms = document.getElementsByClassName('.needs-validation')
 datos = JSON.parse(localStorage.getItem("datos")) || [];
 
-function validarNombre(){
+function validarNombre(nameInput){
 
-    if (txtNombre.value) {
+    if (nameInput) {
         return true
     }else{
         return false;
@@ -24,35 +25,45 @@ function validarNombre(){
 }//validarNombre
 
 
-function validarCorreo(){
-    if (txtCorreo.value) {
+function validarCorreo(emailInput){
+    if (emailInput) {
         return true
     }else{
         return false;
     }
 }//validarEstado
 
-function validarPassword(){
+function validarPassword(passwordInput){
 
-    if (txtPassword.value) {
+    if (passwordInput) {
         return true
     }else{
         return false;
     }
 }//validarPassword 
-function validarPasswordConf(){
-
-    if (txtPassword.value && txtConfPassword === txtPassword) {
+function validarPasswordConf(passwd, passConf){
+    console.group('validarPasswordConf');
+    console.log(passwd)
+    console.log(passConf);
+    console.groupEnd();
+    if (passwd && passwd === passConf) {
+        console.log('Is Valid');
+        console.groupEnd();
         return true
+        
     }else{
+        console.log('Is not Valid');
+        console.groupEnd();
         return false;
+        
     }
+    
 }//validarPassword 
 
 
 
-function validarTelefono(){
-    if(txtTelefono.value.length ===10){
+function validarTelefono(telNumber){
+    if(telNumber.length ===10){
         return true;
     }
     else {
@@ -64,7 +75,24 @@ function validarTelefono(){
 
 btnCrearCuenta.addEventListener("click", function(event){
     event.preventDefault();
-    form.classList.add('was-validated') 
+
+    const form = document.getElementById('formReg');
+    form.classList.add('was-validated');
+
+    // Para aca y usar const.
+    const txtNombre = document.getElementById("InputNombreComp").value;
+    const txtCorreo = document.getElementById("InputCorreo").value;
+    const txtTelefono = document.getElementById("InputTelReg").value;
+    const txtPassword = document.getElementById("InputPasswordReg").value;
+    const txtConfPassword = document.getElementById("InputPasswordConf").value;
+
+    console.log(txtNombre);
+    console.log(txtCorreo);
+    console.log(txtTelefono);
+    console.log(txtPassword);
+    console.log(txtConfPassword);
+
+    // form.classList.add('was-validated') 
 
     let isValid = true;
 
@@ -78,34 +106,32 @@ btnCrearCuenta.addEventListener("click", function(event){
     txtConfPassword.style = "";
 
 
-    if(txtNombre.value.length < 2){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
+    if(txtNombre.length < 2){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         
         isValid = false;
         return;
     }//txtNombre
 
 
-    if(! validarCorreo()){
+    if(! validarCorreo(txtCorreo)){
         isValid = false;
         return;
     }//If ! validarCategoria
 
 
-    if(! validarPassword()){
+    if(! validarPassword(txtPassword)){
         isValid = false;
         return;
     }//If ! validarEstado
 
 
-    /*if(! validarPasswordConf()){
-        alertValidaciones.innerHTML+="La contraseña <strong> es incorrecta </strong>o no coincide <br/>";
-        alertValidaciones.style.display="block";
-        txtConfPassword.style.border="solid thin red";
+    if(! validarPasswordConf(txtPassword, txtConfPassword)){
         isValid = false;
-    }//If ! validarCategoria*/
+        return;
+    }//If ! validarCategoria
 
 
-    if(! validarTelefono()){
+    if(! validarTelefono(txtTelefono)){
         isValid = false;
         return;
     }//If ! validarTelefono
@@ -114,14 +140,14 @@ btnCrearCuenta.addEventListener("click", function(event){
     //JSON
     if(isValid){ 
         //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
-        const correo = txtCorreo.value;
-        const password = txtPassword.value;
+        const correo = txtCorreo;
+        const password = txtPassword;
 
             let elemento = {
-                name : txtNombre.value,
-                telefono:  txtTelefono.value,
-                correo: txtCorreo.value,
-                password: txtPassword.value,
+                name : txtNombre,
+                telefono:  txtTelefono,
+                correo: txtCorreo,
+                password: txtPassword,
                 confpass: txtConfPassword
             };
 
@@ -139,5 +165,5 @@ btnCrearCuenta.addEventListener("click", function(event){
         
 
     } //isValid
-    if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}
+   /* if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}*/
 });//btnEnviar.addEventListener
