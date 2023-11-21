@@ -8,9 +8,11 @@ let txtMensaje = document.getElementById("exampleFormControlTextarea1");
 let btnClear = document.getElementById("btnClear");
 
 function validarCantidad() {
+
     if (txtNumber.value.length === 10) {
         return true;
     }
+  
     if (parseFloat(txtNumber.value) <= 0) {
         return false;
     }

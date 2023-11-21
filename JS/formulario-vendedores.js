@@ -25,7 +25,7 @@ let txtImg= document.getElementById("img-product"); //esto no se está utilizand
 let imagen = document.querySelector('#img-product');
 
 
-//Arreglo que va a almacena los elementos de mi tabla
+//Arreglo que va a almacena los elementos 
 datos = JSON.parse(localStorage.getItem("datos")) || [];
 
 function validarCategoria(){

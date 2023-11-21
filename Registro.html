@@ -44,44 +44,26 @@
        </div>
 
       <div class="d-flex justify-content-center">
-        <form class="needs-validation col-xs-10 col-sm-10 col-md-10 col-lg-10" novalidate id="form">
+        <form class="needs-validation col-xs-10 col-sm-10 col-md-10 col-lg-10" id="form">
 
           <div class="row">
             <div class="form-group col-sm-12 col-md-12 col-lg-12">
             <label for="InputNombreComp" class="form-label">Nombre completo</label>
-            <input type="text" class="form-control registroDatos" id="InputNombreComp" aria-describedby="emailHelp" placeholder="Gran Bazar" required pattern="^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$"></input>
-            <div class="valid-feedback">
-              Nombre válido.
+            <input type="text" class="form-control registroDatos" id="InputNombreComp" aria-describedby="emailHelp" placeholder="Gran Bazar" required>
             </div>
-            <div class="invalid-feedback">
-              El campo <strong>nombre</strong> es necesario.
-            </div>
-          </div>
           </div>
 
 
           <div class="row">
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputCorreo" class="form-label" >Correo electrónico</label>
-              <input type="text" class="form-control registroDatos" id="InputCorreo" aria-describedby="emailHelp" placeholder="elgranbazar@gmail.com" required pattern="^([\-\.a-zA-Z0-9]+)@([\-\.a-zA-Z0-9]+)\.([a-zA-Z]){2,7}$">
-              <div class="valid-feedback">
-                Correo válido.
-              </div>
-              <div class="invalid-feedback">
-                El campo <strong>correo electrónico</strong> es necesario.
-              </div>
+              <input type="text" class="form-control registroDatos" id="InputCorreo" aria-describedby="emailHelp" placeholder="elgranbazar@gmail.com" required>
             </div>
 
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputTelReg" class="form-label">Número telefónico</label>
-              <input type="text" class="form-control registroDatos" id="InputTelReg" placeholder="xxxxxxxxxx" minlength="10" maxlength="10" pattern="^(?!.*(\d)\1{4})\d{10}$" required >
-              <div class="valid-feedback">
-                Número válido.
-              </div>
-              <div class="invalid-feedback">
-                El campo <strong>número telefónico</strong> es necesario.
-              </div>
-             </div>
+              <input type="text" class="form-control registroDatos" id="InputTelReg" placeholder="xxxxxxxxxx" required >
+            </div>
           </div>
        
 
@@ -90,26 +72,14 @@
           <div class="row">
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputPasswordReg" class="form-label">Contraseña</label>
-              <input type="password" class="form-control registroDatos" id="InputPasswordReg" placeholder="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-              <div class="valid-feedback">
-                Contraseña válida.
-              </div>
-              <div class="invalid-feedback" id="mensajecontr">
-                Debe contener mínimo un número, una letra mayúscula y una minúscula, al menos 8 o más carácteres.
-              </div>
-          </div>
+              <input type="password" class="form-control registroDatos" id="InputPasswordReg" placeholder="Introduce tu contraseña" required>
+            </div>
 
-            <div class="form-group col-sm-12 col-md-12 col-lg-6">
+            <div id = "divContrasenas" class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputPasswordConf" class="form-label">Confirma la contraseña</label>
-              <input type="password" class="form-control registroDatos" id="InputPasswordConf" placeholder="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" data-match="InputPasswordReg">
-              <div class="valid-feedback">
-                Contraseñas coinciden.
-              </div>
-              <div class="invalid-feedback" id="mensaje">
-                El campo <strong>confirmación de contraseña</strong> es necesario.
-              </div>
+              <input type="password" class="form-control registroDatos" id="InputPasswordConf" placeholder="Introduce tu contraseña" required>
+            </div>
           </div>
-        </div>
         
 
       <div class="text-center">
@@ -170,11 +140,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./JS/navbar3.js"></script>
     <script src="./JS/footer.js" defer> </script>
-    <script src="./JS/registro.js"></script>
-    <!--<script>
-      function mostrarSweetAlert() {
-        Swal.fire('¡Hola, mundo!', 'Este es un mensaje de SweetAlert', 'success');
-      }
-    </script>-->
+    <script src="./JS/registro.js"></script><!--Sweet Alert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </body>
 </html>
