@@ -74,7 +74,7 @@
 
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputTelReg" class="form-label">Número telefónico</label>
-              <input type="text" class="form-control registroDatos" id="InputTelReg" placeholder="xxxxxxxxxx" minlength="10" maxlength="10" pattern="/^(?!.*(\d)\1{4})\d{10}$/" required >
+              <input type="text" class="form-control registroDatos" id="InputTelReg" placeholder="xxxxxxxxxx" minlength="10" maxlength="10" pattern="^(?!.*(\d)\1{4})\d{10}$" required >
               <div class="valid-feedback">
                 Número válido.
               </div>
@@ -90,7 +90,7 @@
           <div class="row">
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputPasswordReg" class="form-label">Contraseña</label>
-              <input type="password" class="form-control registroDatos" id="InputPasswordReg" placeholder="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <input type="password" class="form-control registroDatos" id="InputPasswordReg" placeholder="Introduce tu contraseña" required pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}">
               <div class="valid-feedback">
                 Contraseña válida.
               </div>
@@ -101,7 +101,7 @@
 
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputPasswordConf" class="form-label">Confirma la contraseña</label>
-              <input type="password" class="form-control registroDatos" id="InputPasswordConf" placeholder="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" data-match="InputPasswordReg">
+              <input type="password" class="form-control registroDatos" id="InputPasswordConf" placeholder="Introduce tu contraseña" required pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" data-match="InputPasswordReg">
               <div class="valid-feedback">
                 Contraseñas coinciden.
               </div>
@@ -172,6 +172,5 @@
     <script src="./JS/footer.js" defer> </script>
     <script src="./JS/registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   </body>
 </html>

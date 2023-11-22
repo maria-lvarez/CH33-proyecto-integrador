@@ -12,9 +12,7 @@ let btnClear = document.getElementById("btnClear");
 
 
 //Arreglo que va a almacena los elementos de mi tabla
-
 // const forms = document.getElementsByClassName('.needs-validation')
-
 personas = JSON.parse(localStorage.getItem("personas")) || [];
 
 function validarNombre(nameInput){
@@ -43,42 +41,31 @@ function validarPassword(passwordInput){
         return false;
     }
 }//validarPassword 
-
-
-
 function validarPasswordConf(passwd, passConf){
     console.group('validarPasswordConf');
     console.log(passwd)
     console.log(passConf);
     console.groupEnd();
-
     if (passwd && passwd === passConf) {
-        // console.log('Is Valid');
-        // console.groupEnd();
         Swal.fire({
             //position: "top-end",
             icon: "success",
-            title: "Registro éxitoso",
+            title: "Registro exitoso",
             showConfirmButton: false,
             timer: 1500
         });
-        
         return true
         
     }else{
-        // console.log('Is not Valid');
-        // console.groupEnd();
         Swal.fire({
             icon: "error",
             title: "Oops... ",
             text: "No se ha podido registrar, ¡Las contraseñas no coinciden!",
-            });
+        });
         return false;
         
     }
     
-    
-
 }//validarPassword 
 
 
@@ -126,8 +113,6 @@ btnCrearCuenta.addEventListener("click", function(event){
     txtPassword.style = "";
     txtConfPassword.style = "";
 
-    
-
 
     if(txtNombre.length < 2){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         
@@ -172,8 +157,7 @@ btnCrearCuenta.addEventListener("click", function(event){
                 correo: txtCorreo,
                 password: txtPassword,
                 confpass: txtConfPassword
-            };//elemento
-
+            };
 
             let correoRepetido = personas.find(usuario => usuario.correo === txtCorreo)
             if (correoRepetido){
@@ -208,4 +192,10 @@ btnCrearCuenta.addEventListener("click", function(event){
 
     // if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}
 });//btnEnviar.addEventListener
+        
+
+        
+        
+
+
 
