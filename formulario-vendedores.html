@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>El Gran Bazar</title>
+    <title>Vendedores</title>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="./src/images/icono_head.png">
     <!--Bootstrap-->
@@ -42,12 +42,9 @@
   <div id="for-izq" class="col my-5">
       <img id="img-p-input" src="./src/images/flat-lay-objetos-vintage-naturaleza-muerta.jpg" class="img-fluid mt-5" alt="...">
       <div class="input-group mt-3">
-
-
-       <!-- <img id="img-product"> esta se comento para uque la imagen aparezca contenida en el recuadro de la de arriba-->
+       <img id="img-product"> <!-- esta se comento para uque la imagen aparesca contenida en el recuadro de la de arriba -->
         <!--Boton para Cargar imagen-->
-       <button id="upload_widget" class="btn btn-secondary btn-enviar-der mr-2 col-2" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>
-
+      <button id="upload_widget" class="btn btn-enviar-der mr-2 col-sm-2 col-md-3" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>
       </div><!-- agrega un archivo-->
       <p class="mr-5 aviso-texto text-center">Si tienes dudas <a href="./contacto.html"> contáctanos </a></p>
 
@@ -137,10 +134,8 @@
         <option value="DHL">DHL</option>
         <option value="Estafeta">Estafeta</option>
       </select>
-      
     </div>
-
-
+    <!--<button id="upload_widget" class="btn btn-secondary btn-enviar-der mr-1 col-2" class="cloudinary-button justify-content-center" required>Carga tu imagen</button>-->
     <p class="mr-5 aviso-texto">Recuerda que los costos de envio son cubiertos por el comprador</p>
 
     <div id="check-form" class="mr-5">
@@ -148,20 +143,20 @@
      <div class="col md-8"> 
       <div class="form-check">
           <input id="terminos1" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1" required>
-          <label class="form-check-label cubito-text" for="defaultCheck1">
-            Acepto los terminos y condiciones.
+          <label class="form-check-label cubito-text" for="terminos1">
+            Acepto los términos y condiciones.
           </label>
         </div>
         <div class="form-check container">
-          <input id="terminos2" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck1" required>
-          <label class="form-check-label cubito-text" for="defaultCheck1">
-           Acepto los terminos de selección de productos.
+          <input id="terminos2" class="form-check-input cubito" type="checkbox" value="" id="defaultCheck2" required>
+          <label class="form-check-label cubito-text" for="terminos2">
+           Acepto los términos de selección de productos.
           </label>
         </div>       
         </div><!--clas col para checkbox-->
-        <button type="button" class="btn btn-secondary btn-enviar-der mr-2 col-2" id="btn-enviar-form">Enviar</button>
-        <button type="button" class="btn btn-secondary btn-enviar-der mr-2 col-2" id="btnClear">Limpiar</button>
-        <p class="mr-5 aviso-texto">Antes de poder publicar tu producto en la página web, tu publicación debe ser enviara a revisión donde nuestros colaboradores se encargaran de revisarla antes de aprobarla</p>
+        <button type="button" class="btn btn-secondary btn-enviar-der mr-2 col-sm-2 col-md-3" id="btn-enviar-form">Enviar</button>
+        <button type="button" class="btn btn-secondary btn-enviar-der mr-2 col-sm-2 col-md-3" id="btnClear">Limpiar</button>
+        <p class="mr-5 aviso-texto">Antes de poder publicar tu producto en la página web, tu publicación debe ser enviada a revisión donde nuestros colaboradores se encargarán de revisarla antes de aprobarla</p>
       </div>
      </div><!--cierre de contenedor checkbox-->
 
@@ -171,20 +166,20 @@
 
 <div id="img-fondo" class="row g-0">
 
-<div class="col p-container">
+<div class="col-sm-12 col-lg-4 p-container">
   <img src="./src/images/flat-lay-objetos-vintage-naturaleza-muerta.jpg" class="img-fluid  img-fondo" alt="...">
   <div class="centered">Vende de manera segura</div>
   <div class="left2">Sin encuentros</div>
 </div>
-<div class="col p-container">
+<div class="col-sm-12 col-lg-4 p-container">
   <img src="./src/images/vintage.png" class="img-fluid  img-fondo" alt="...">
   <div class="centered">Gana dinero</div>
-  <div class="left2">Dandole una segunda vida a tus pertenencias</div>
+  <div class="left2">Dándole una segunda vida a tus pertenencias</div>
 </div>
-<div class="col p-container">
+<div class="col-sm-12 col-lg-4 p-container">
   <img src="./src/images/nature.png" class="img-fluid  img-fondo" alt="...">
-  <div class="centered">Ayuda al medio ambiente</div>
-  <div class="left2">Alargando el ciclo de vida de los productos</div>
+  <div class="centered col-sm-6 col-xs-6">Ayuda al medio ambiente</div>
+  <div class="left2 col-sm-6 col-xs-6">Alargando el ciclo de vida de los productos</div>
 </div>
 </div><!--cierra img-fondo-->
 

@@ -13,9 +13,10 @@ h4{
 }
 p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 1.25rem;
     text-align: justify;
 }
+
 /*Misión*/
 .imgMision{
     transition: transform 2s;

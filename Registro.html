@@ -74,7 +74,7 @@
 
             <div class="form-group col-sm-12 col-md-12 col-lg-6">
               <label for="InputTelReg" class="form-label">Número telefónico</label>
-              <input type="text" class="form-control registroDatos" id="InputTelReg" placeholder="xxxxxxxxxx" minlength="10" maxlength="10" pattern="^(?!.*(\d)\1{4})\d{10}$" required >
+              <input type="text" class="form-control registroDatos" id="InputTelReg" placeholder="xxxxxxxxxx" minlength="10" maxlength="10" pattern="/^(?!.*(\d)\1{4})\d{10}$/" required >
               <div class="valid-feedback">
                 Número válido.
               </div>
@@ -171,10 +171,7 @@
     <script src="./JS/navbar3.js"></script>
     <script src="./JS/footer.js" defer> </script>
     <script src="./JS/registro.js"></script>
-    <!--<script>
-      function mostrarSweetAlert() {
-        Swal.fire('¡Hola, mundo!', 'Este es un mensaje de SweetAlert', 'success');
-      }
-    </script>-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </body>
 </html>

@@ -49,10 +49,12 @@ input.form-control.me-2{
 }
 
 /*icono de carrito */
-#carrito{
+#carrito, #puertitaCerrada{
     font-size: 2rem;
     color:#83764C;
 }
+
+
 /*Espacio entre los elementos del navbar*/
 #ul-nav li{
     margin-left: 1rem;

@@ -74,13 +74,14 @@ function validarPrecio(){
 }//ValidarPrecio
 
 function validarTelefono(){
-    if(txtTel.value.length ===10){
+    let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
+    if(validTel.test(txtTel.value)){
         return true;
     }
     else {
         return false;
     }
-}//ValidarCantidad
+}//ValidarTelefono
 
 
 function validarCP() { 
@@ -227,13 +228,6 @@ btnEnviarForm.addEventListener("click", function(event){
         isValid = false;
     }//If ! validarImagen
 
-
-
-    //Boton de la imagen para cargar
-    
-    
-
-
     //JSON
     if(isValid){ //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
 
@@ -251,7 +245,7 @@ btnEnviarForm.addEventListener("click", function(event){
         localStorage.setItem("datos", JSON.stringify(datos)); //Convierte los alementos de mi array en string
 
 
-        window.location.href = "electrodomesticos.html";
+        window.location.href = "recienanadidos.html";
 
     } //isValid
 
@@ -291,21 +285,6 @@ btnClear.addEventListener("click", function(event){
 
 });//btnClear.addEventListener
 
-let myWidget = cloudinary.createUploadWidget({
-        cloudName: 'dvdf3ncs2', 
-        uploadPreset: 'ElGranBazar',
-        folder: 'widgetUpload', 
-        cropping: true
-    }, (error, result) => { 
-        if (!error && result && result.event === "success") { 
-            console.log('Imagen subida con éxito: ', result.info); 
-            imagen.src = result.info.secure_url;
-        }
-    });
-
-    document.getElementById("upload_widget").addEventListener("click", function(){
-        myWidget.open();
-    }, false);
 
 //Boton de la imagen para cargar
 let myWidget = cloudinary.createUploadWidget({

@@ -7,15 +7,15 @@ let txtNumber = document.getElementById("exampleFormControlInput3");
 let txtMensaje = document.getElementById("exampleFormControlTextarea1");
 let btnClear = document.getElementById("btnClear");
 
-function validarCantidad() {
-    if (txtNumber.value.length === 10) {
+function validarTelefono(){
+    let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
+    if(validTel.test(txtNumber.value)){
         return true;
     }
-    if (parseFloat(txtNumber.value) <= 0) {
+    else {
         return false;
     }
-    return false;
-}
+}//ValidarTelefono
 
 function validarEmail() {
     let re = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
@@ -32,7 +32,7 @@ function validarEnvio() {
         isValid = false;
     }
 
-    if (!validarCantidad()) {
+    if (!validarTelefono()) {
         alertValidaciones.innerHTML += "El campo <strong>Teléfono</strong> es requerido <br/>";
         alertValidaciones.style.display = "block";
         txtNumber.style.border = "solid thin red";
@@ -75,21 +75,32 @@ btnEnviar.addEventListener("click", function (event) {
 
         emailjs.send('service_1tkzfeo', 'template_k55hz2c', templateParams)
             .then(function (response) {
-                alertValidaciones1.innerHTML += "<strong>¡Mensaje Enviado!</strong> El mensaje ha sido enviado con éxito <br/>";
-                alertValidaciones1.style.display = "block";
+                // alertValidaciones1.innerHTML += "<strong>¡Mensaje Enviado!</strong> El mensaje ha sido enviado con éxito <br/>";
+                // alertValidaciones1.style.display = "block";
+                Swal.fire({
+                    //position: "top-end",
+                    icon: "success",
+                    title: "Mensaje enviado correctamente!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 console.log('SUCCESS!', response.status, response.text);
             }, function (error) {
                 console.log('FAILED...', error);
             });
 
-        txtNombre.value = "";
-        txtNumber.value = "";
-        txtEmail.value = "";
-        txtMensaje.value = "";
-    } else {
-        alertValidaciones.innerHTML += "<strong>ERROR:</strong> El mensaje no ha sido enviado, completa correctamente los campos. <br/>";
-        alertValidaciones.style.display = "block";
+        
+    } else if (!validarEnvio()){
+        // alertValidaciones.innerHTML += "<strong>ERROR:</strong> El mensaje no ha sido enviado, completa correctamente los campos. <br/>";
+        // alertValidaciones.style.display = "block";
+        Swal.fire({
+            icon: "error",
+            title: "Oops... ",
+            text: "No se ha podido enviar el mensaje, ¡Intente nuevamente!",
+            });
     }
+    
+    
 });
 
 btnClear.addEventListener("click", function (event) {
@@ -106,3 +117,8 @@ btnClear.addEventListener("click", function (event) {
     txtEmail.value = "";
     txtMensaje.value = "";
 });
+
+// txtNombre.value = "";
+//         txtNumber.value = "";
+//         txtEmail.value = "";
+//         txtMensaje.value = "";

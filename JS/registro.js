@@ -15,7 +15,7 @@ let btnClear = document.getElementById("btnClear");
 
 // const forms = document.getElementsByClassName('.needs-validation')
 
-datos = JSON.parse(localStorage.getItem("datos")) || [];
+personas = JSON.parse(localStorage.getItem("personas")) || [];
 
 function validarNombre(nameInput){
 
@@ -44,23 +44,41 @@ function validarPassword(passwordInput){
     }
 }//validarPassword 
 
+
+
 function validarPasswordConf(passwd, passConf){
     console.group('validarPasswordConf');
     console.log(passwd)
     console.log(passConf);
     console.groupEnd();
+
     if (passwd && passwd === passConf) {
-        console.log('Is Valid');
-        console.groupEnd();
+        // console.log('Is Valid');
+        // console.groupEnd();
+        Swal.fire({
+            //position: "top-end",
+            icon: "success",
+            title: "Registro éxitoso",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        
         return true
         
     }else{
-        console.log('Is not Valid');
-        console.groupEnd();
+        // console.log('Is not Valid');
+        // console.groupEnd();
+        Swal.fire({
+            icon: "error",
+            title: "Oops... ",
+            text: "No se ha podido registrar, ¡Las contraseñas no coinciden!",
+            });
         return false;
         
     }
     
+    
+
 }//validarPassword 
 
 
@@ -108,6 +126,8 @@ btnCrearCuenta.addEventListener("click", function(event){
     txtPassword.style = "";
     txtConfPassword.style = "";
 
+    
+
 
     if(txtNombre.length < 2){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
         
@@ -152,23 +172,40 @@ btnCrearCuenta.addEventListener("click", function(event){
                 correo: txtCorreo,
                 password: txtPassword,
                 confpass: txtConfPassword
-            };
+            };//elemento
 
 
-        //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
-        datos.push((elemento));
-        localStorage.setItem('email', correo);
-        localStorage.setItem('password', password);
-        //Guardar mi arreglo en el local storage
-        localStorage.setItem("datos", JSON.stringify(datos));
-        alertValidaciones1.innerHTML+="El registro <strong>fue exitoso</strong>, ¡Bienvenid@!<br/>";
-        alertValidaciones1.style.display="block"; //Convierte los alementos de mi array en string
-
-        
-        
-
+            let correoRepetido = personas.find(usuario => usuario.correo === txtCorreo)
+            if (correoRepetido){
+                //alert ("Usuario ya registrado");
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops... ",
+                    text: "Usuario ya registrado!",
+                    });
+                
+            } else {
+                //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
+                personas.push((elemento));
+                // localStorage.setItem('email', correo);
+                // localStorage.setItem('password', password);
+                //Guardar mi arreglo en el local storage
+                localStorage.setItem("personas", JSON.stringify(personas));
+                
+            }//correoRepetido
+            
+            //intento fallido para borrar los campos
+            // document.addEventListener('DOMContentLoaded', function(){
+            //     let formularioRegistro =document.getElementById("formReg");
+            //     formularioRegistro.addEventListener('submit', function(){
+            //         formularioRegistro.reset();
+            //     });
+            // });
     } //isValid
 
-    if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}
+    // alertValidaciones.innerHTML="";
+    // alertValidaciones.style.display="none";
+
+    // if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}
 });//btnEnviar.addEventListener
 
