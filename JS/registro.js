@@ -69,15 +69,15 @@ function validarPasswordConf(passwd, passConf){
 }//validarPassword 
 
 
-
-function validarTelefono(telNumber){
-    if(telNumber.length ===10){
+function validarTelefono(txtNumber){
+    let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
+    if(validTel.test(txtNumber.value)){
         return true;
     }
     else {
         return false;
     }
-}//ValidarCantidad
+}//ValidarTelefono
 
 
 
