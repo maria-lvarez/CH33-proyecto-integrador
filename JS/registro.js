@@ -47,13 +47,7 @@ function validarPasswordConf(passwd, passConf){
     console.log(passConf);
     console.groupEnd();
     if (passwd && passwd === passConf) {
-        Swal.fire({
-            //position: "top-end",
-            icon: "success",
-            title: "Registro exitoso",
-            showConfirmButton: false,
-            timer: 1500
-        });
+    
         return true
         
     }else{
@@ -71,7 +65,7 @@ function validarPasswordConf(passwd, passConf){
 
 function validarTelefono(txtNumber){
     let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
-    if(validTel.test(txtNumber.value)){
+    if(validTel.test(txtNumber)){
         return true;
     }
     else {
@@ -115,41 +109,35 @@ btnCrearCuenta.addEventListener("click", function(event){
 
 
     if(txtNombre.length < 2){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        
         isValid = false;
-        return;
+        //console.log("txtNombre false");
     }//txtNombre
-
 
     if(! validarCorreo(txtCorreo)){
         isValid = false;
-        return;
+        //console.log("txtCorreo false");
     }//If ! validarCategoria
-
 
     if(! validarPassword(txtPassword)){
         isValid = false;
-        return;
+        //console.log("txtPassword false");
     }//If ! validarEstado
-
 
     if(! validarPasswordConf(txtPassword, txtConfPassword)){
         isValid = false;
-        return;
+        //console.log("txtPasswordConf false");
     }//If ! validarCategoria
-
 
     if(! validarTelefono(txtTelefono)){
         isValid = false;
-        return;
+        //console.log("txtTelefono false");
     }//If ! validarTelefono
-
-
+//console.log(isValid);
     //JSON
     if(isValid){ 
         //Si es valido el nombre y la cantidad los agregará a la tabla, si no, no los agregará
-        const correo = txtCorreo;
-        const password = txtPassword;
+        //const correo = txtCorreo;
+        //const password = txtPassword;
 
             let elemento = {
                 name : txtNombre,
@@ -171,26 +159,20 @@ btnCrearCuenta.addEventListener("click", function(event){
             } else {
                 //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
                 personas.push((elemento));
-                // localStorage.setItem('email', correo);
-                // localStorage.setItem('password', password);
-                //Guardar mi arreglo en el local storage
-                localStorage.setItem("personas", JSON.stringify(personas));
                 
+                localStorage.setItem("personas", JSON.stringify(personas));
+                Swal.fire({
+                    //position: "top-end",
+                    icon: "success",
+                    title: "Registro exitoso",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             }//correoRepetido
             
-            //intento fallido para borrar los campos
-            // document.addEventListener('DOMContentLoaded', function(){
-            //     let formularioRegistro =document.getElementById("formReg");
-            //     formularioRegistro.addEventListener('submit', function(){
-            //         formularioRegistro.reset();
-            //     });
-            // });
+        
     } //isValid
 
-    // alertValidaciones.innerHTML="";
-    // alertValidaciones.style.display="none";
-
-    // if(txtConfPassword.value===txtPassword.value){window.location.href = "login.html";}
 });//btnEnviar.addEventListener
         
 
