@@ -132,8 +132,10 @@ let txtNumber = document.getElementById("exampleFormControlInput3");
 let txtMensaje = document.getElementById("exampleFormControlTextarea1");
 let btnClear = document.getElementById("btnClear");
 
+
 function validarCantidad() {
-    if (txtNumber.value.length === 10) {
+    let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
+    if (txtNumber.value.length === 10 && validTel.test(txtNumber.value)) {
         return true;
     }
     if (parseFloat(txtNumber.value) <= 0) {
@@ -200,6 +202,7 @@ btnEnviar.addEventListener("click", function (event) {
 
         emailjs.send('service_1tkzfeo', 'template_k55hz2c', templateParams)
             .then(function (response) {
+                alertValidaciones1.innerHTML = "";
                 alertValidaciones1.innerHTML += "<strong>¡Mensaje Enviado!</strong> El mensaje ha sido enviado con éxito <br/>";
                 alertValidaciones1.style.display = "block";
                 console.log('SUCCESS!', response.status, response.text);
