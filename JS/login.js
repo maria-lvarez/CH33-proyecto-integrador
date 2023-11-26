@@ -1,6 +1,6 @@
 let btnIniciarSesion = document.getElementById("btnIniciarSesion");
 
-  btnIniciarSesion.addEventListener("click", function (event) {
+btnIniciarSesion.addEventListener("click", function (event) {
 
         event.preventDefault();
 
@@ -37,7 +37,7 @@ let btnIniciarSesion = document.getElementById("btnIniciarSesion");
                 });
             }
             
-           })//forEach
+        })//forEach
 
 
 });
