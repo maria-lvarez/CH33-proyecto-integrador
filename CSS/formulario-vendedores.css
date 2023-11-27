@@ -40,6 +40,12 @@
      background-color: #8A2F2E;
      color:#F7BB75;
  }
+
+/*texto del acordeón*/
+.accordion-body{
+    text-align: justify;
+}
+
  /* este es el color del checkbox*/
  .aviso-texto{
      color:#83764C;
@@ -80,7 +86,7 @@
  /* estilos de imagenes de pie de pagina*/
  img.img-fondo{
      display: block;
-     filter:  brightness(50%) blur(.08rem);
+     filter:  brightness(100%) blur(0rem);
      height: 20rem;
      width: 100%;
  }
@@ -95,7 +101,7 @@
      text-align: center;
  }
  /*esta es la posicion del texto dentro de la imagen de pie de pagina*/
- .centered{
+ /* .centered{
      position: absolute;
      top: 5rem;
      left: 2rem;
@@ -113,4 +119,4 @@
      text-align:end;
      -webkit-text-stroke-width: 0.04rem;
      -webkit-text-stroke-color:#F7BB75;
-   }
+   } */

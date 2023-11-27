@@ -140,7 +140,7 @@ btnEnviarForm.addEventListener("click", function(event){
 
 
     if(txtProducto.value.length < 3){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        alertValidaciones.innerHTML="El campo <strong> producto </strong> es requerido <br/> ";
+        alertValidaciones.innerHTML="El campo <strong> Producto </strong> es requerido <br/> ";
         alertValidaciones.style.display="block"; //block o inline para que lo muestre
         txtProducto.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
         isValid = false;
@@ -148,7 +148,7 @@ btnEnviarForm.addEventListener("click", function(event){
 
 
     if(! validarCategoria()){
-        alertValidaciones.innerHTML+="El campo <strong> categoría </strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Categoría </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtCategoria.style.border="solid thin red";
         isValid = false;
@@ -156,7 +156,7 @@ btnEnviarForm.addEventListener("click", function(event){
 
 
     if(! validarEstado()){
-        alertValidaciones.innerHTML+="El campo <strong> estado </strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Estado </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtEstado.style.border="solid thin red";
         isValid = false;
@@ -164,35 +164,35 @@ btnEnviarForm.addEventListener("click", function(event){
 
 
     if(! validarEnvio()){
-        alertValidaciones.innerHTML+="El campo <strong> envío </strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Envío </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtEnvio.style.border="solid thin red";
         isValid = false;
     }//If ! validarCategoria
 
     if(txtDescripcion.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        alertValidaciones.innerHTML+="El campo <strong> descripción </strong> es requerido <br/> ";
+        alertValidaciones.innerHTML+="El campo <strong> Descripción </strong> es requerido <br/> ";
         alertValidaciones.style.display="block"; //block o inline para que lo muestre
         txtDescripcion.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
         isValid = false;
     }//validar Descripción
 
     if(! validarPrecio()){
-        alertValidaciones.innerHTML +="El campo <strong> precio </strong> es requerido <br/> ";
+        alertValidaciones.innerHTML +="El campo <strong> Precio </strong> es requerido <br/> ";
         alertValidaciones.style.display="block";
         txtPrecio.style.border = "solid thin red";
         isValid = false;
     }//if ! validarCanrtidad
 
     if(! validarTelefono()){
-        alertValidaciones.innerHTML+="El campo <strong>teléfono</strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Teléfono </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtTel.style.border="solid thin red";
         isValid = false;
     }//If ! validarTelefono
 
     if(txtDireccion.value.length < 10){ //Debo de indicar que quiero su value. Si la palabra tiene menos de 3 letras.
-        alertValidaciones.innerHTML+="El campo <strong> dirección </strong> es requerido <br/> ";
+        alertValidaciones.innerHTML+="El campo <strong> Dirección </strong> es requerido <br/> ";
         alertValidaciones.style.display="block"; //block o inline para que lo muestre
         txtDireccion.style.border = "solid thin red";//Si el campo marca un error se marcará el borde en rojo
         isValid = false;
@@ -200,14 +200,14 @@ btnEnviarForm.addEventListener("click", function(event){
 
 
     if(! validarCP()){
-        alertValidaciones.innerHTML+="El campo <strong> código postal </strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Código Postal </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         txtCP.style.border="solid thin red";
         isValid = false;
     }//If ! validarCP
 
     if(! validarTerminos1()){
-        alertValidaciones.innerHTML+="El campo <strong> Acepto los terminos y condiciones </strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Acepto los términos y condiciones </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         terminos1.style.border="solid thin red";
         isValid = false;
@@ -215,7 +215,7 @@ btnEnviarForm.addEventListener("click", function(event){
 
 
     if(! validarTerminos2()){
-        alertValidaciones.innerHTML+="El campo <strong> Acepto los terminos de selección de productos </strong> es requerido <br/>";
+        alertValidaciones.innerHTML+="El campo <strong> Acepto los términos de selección de productos </strong> es requerido <br/>";
         alertValidaciones.style.display="block";
         terminos2.style.border="solid thin red";
         isValid = false;
