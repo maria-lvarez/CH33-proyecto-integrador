@@ -7,6 +7,10 @@
     text-decoration: none;  
 }
 
+body{
+    overflow-x: hidden;
+}
+
 #sectionLogin{
     background-image: url(https://cdn.pixabay.com/photo/2019/06/12/12/27/egypt-4269151_1280.jpg);
     background-size: cover;

@@ -9,6 +9,9 @@
     text-decoration: none;
     
 }
+body{
+    overflow-x: hidden;
+  }
 
 #cuerpoRegistro{
 background-image: url(https://cdn.pixabay.com/photo/2019/06/12/12/27/egypt-4269151_1280.jpg);

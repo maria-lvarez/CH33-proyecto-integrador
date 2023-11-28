@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
+
 /*Títulos, subtítulos y párrafos*/
  h1, h3{
     font-family: 'Young Serif', serif;
