@@ -49,7 +49,7 @@ input.form-control.me-2{
 }
 
 /*icono de carrito */
-#carrito, #puertitaCerrada{
+#carrito, #puertitaCerrada, #puertitaAbierta{
     font-size: 2rem;
     color:#83764C;
 }
