@@ -38,6 +38,15 @@ btnIniciarSesion.addEventListener("click", function (event) {
             }
             
         })//forEach
-
+        
+        if (usuarios.length <= 0){
+            //alertValidaciones.innerHTML = "El usuario no existe o las credenciales son incorrectas.<br/>";
+            //alertValidaciones.style.display = "block";
+            Swal.fire({
+                icon: "error",
+                title: "Oops... ",
+                text: "¡El usuario no existe o las credenciales son incorrectas!, intenta nuevamente",
+            });
+        }
 
 });
