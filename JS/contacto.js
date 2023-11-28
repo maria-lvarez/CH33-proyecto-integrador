@@ -1,4 +1,4 @@
-let txtNombre = document.getElementById("exampleFormControlInput1");
+/* let txtNombre = document.getElementById("exampleFormControlInput1");
 let btnEnviar = document.getElementById("btnEnviar");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidaciones1 = document.getElementById("alertValidaciones1");
@@ -39,7 +39,7 @@ function validarEnvio() {
         isValid = false;
     }
 
-    if (!validarEmail()) {
+     /*if (!validarEmail()) {
         alertValidaciones.innerHTML += "El campo <strong>Email</strong> es requerido <br/>";
         alertValidaciones.style.display = "block";
         txtEmail.style.border = "solid thin red";
@@ -51,9 +51,9 @@ function validarEnvio() {
         alertValidaciones.style.display = "block";
         txtMensaje.style.border = "solid thin red";
         isValid = false;
-    }
+    } */
 
-    return isValid;
+ /*    return isValid;
 }
 
 btnEnviar.addEventListener("click", function (event) {
@@ -117,8 +117,130 @@ btnClear.addEventListener("click", function (event) {
     txtEmail.value = "";
     txtMensaje.value = "";
 });
-
+ */
 // txtNombre.value = "";
 //         txtNumber.value = "";
 //         txtEmail.value = "";
-//         txtMensaje.value = "";
+//         txtMensaje.value = ""; */
+
+let txtNombre = document.getElementById("exampleFormControlInput1");
+let btnEnviar = document.getElementById("btnEnviar");
+let alertValidaciones = document.getElementById("alertValidaciones");
+let alertValidaciones1 = document.getElementById("alertValidaciones1");
+let txtEmail = document.getElementById("exampleFormControlInput2");
+let txtNumber = document.getElementById("exampleFormControlInput3");
+let txtMensaje = document.getElementById("exampleFormControlTextarea1");
+let btnClear = document.getElementById("btnClear");
+
+
+function validarCantidad() {
+    let validTel = /^(?!.*(\d)\1{4})\d{10}$/;
+    if (txtNumber.value.length === 10 && validTel.test(txtNumber.value)) {
+        return true;
+    }
+    if (parseFloat(txtNumber.value) <= 0) {
+        return false;
+    }
+    return false;
+}
+
+function validarEmail() {
+    let re = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    return re.test(txtEmail.value);
+}
+
+function validarEnvio() {
+    let isValid = true;
+
+    if (txtNombre.value.length < 3) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El campo Nombre es requerido'
+        });
+        txtNombre.style.border = "solid thin red";
+        isValid = false;
+    }
+
+    if (!validarCantidad()) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El campo Teléfono es requerido'
+        });
+        txtNumber.style.border = "solid thin red";
+        isValid = false;
+    }
+
+    if (!validarEmail()) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El campo Email es requerido'
+        });
+        txtEmail.style.border = "solid thin red";
+        isValid = false;
+    }
+
+    if (txtMensaje.value.length < 10) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El campo Mensaje es requerido'
+        });
+        txtMensaje.style.border = "solid thin red";
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+btnEnviar.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    txtNombre.style.border = "";
+    txtEmail.style.border = "";
+    txtNumber.style.border = "";
+    txtMensaje.style.border = "";
+
+    if (validarEnvio()) {
+        var templateParams = {
+            name: txtNombre.value,
+            email: txtEmail.value,
+            phone: txtNumber.value,
+            message: txtMensaje.value
+        };
+
+        emailjs.send('service_1tkzfeo', 'template_k55hz2c', templateParams)
+            .then(function (response) {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Mensaje Enviado!',
+                    text: 'El mensaje ha sido enviado con éxito'
+                });
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+
+        txtNombre.value = "";
+        txtNumber.value = "";
+        txtEmail.value = "";
+        txtMensaje.value = "";
+    }  
+});
+
+btnClear.addEventListener("click", function (event) {
+    event.preventDefault();
+    alertValidaciones.innerHTML = "";
+    alertValidaciones.style.display = "none";
+    txtNombre.style.border = "";
+    txtNumber.style.border = "";
+    txtEmail.style.border = "";
+    txtMensaje.style.border = "";
+
+    txtNombre.value = "";
+    txtNumber.value = "";
+    txtEmail.value = "";
+    txtMensaje.value = "";
+});
