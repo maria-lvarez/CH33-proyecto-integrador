@@ -56,7 +56,7 @@ let arJson = [
             '<br/>\n';
     
     
-            if(item.categoria == "Electrodomesticos"){
+            if(item.categoria == "Electrodomésticos"){
             contenedorCardElectrodomesticos.insertAdjacentHTML("beforeend",card);
             } 
         });//forEach

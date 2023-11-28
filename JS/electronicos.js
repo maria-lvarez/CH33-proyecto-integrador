@@ -56,7 +56,7 @@ let arJson = [
             '<br/>\n';
     
     
-            if(item.categoria == "Electronicos"){ //nombre traído del option value para electrónicos en el formulario vendedores de HTML
+            if(item.categoria == "Electrónicos"){ //nombre traído del option value para electrónicos en el formulario vendedores de HTML
             contenedorCardElectro.insertAdjacentHTML("beforeend",card);
             } 
         });//forEach

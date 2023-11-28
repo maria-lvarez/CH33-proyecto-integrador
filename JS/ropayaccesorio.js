@@ -57,7 +57,7 @@ let arJson = [
             '</div>\n' +
             '<br/>\n';
     
-            if(item.categoria == "Ropa-accesorios"){
+            if(item.categoria == "Ropa y accesorios"){
             contenedorCardRopa.insertAdjacentHTML("beforeend",card);
             }
     
