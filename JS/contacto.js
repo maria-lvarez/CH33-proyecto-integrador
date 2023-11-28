@@ -153,41 +153,29 @@ function validarEnvio() {
     let isValid = true;
 
     if (txtNombre.value.length < 3) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El campo Nombre es requerido'
-        });
+        alertValidaciones.innerHTML = "El campo <strong> Nombre </strong> es requerido <br/>";
+        alertValidaciones.style.display = "block";
         txtNombre.style.border = "solid thin red";
         isValid = false;
     }
 
     if (!validarCantidad()) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El campo Teléfono es requerido'
-        });
+        alertValidaciones.innerHTML += "El campo <strong>Teléfono</strong> es requerido <br/>";
+        alertValidaciones.style.display = "block";
         txtNumber.style.border = "solid thin red";
         isValid = false;
     }
 
     if (!validarEmail()) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El campo Email es requerido'
-        });
+        alertValidaciones.innerHTML += "El campo <strong>Email</strong> es requerido <br/>";
+        alertValidaciones.style.display = "block";
         txtEmail.style.border = "solid thin red";
         isValid = false;
     }
 
     if (txtMensaje.value.length < 10) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'El campo Mensaje es requerido'
-        });
+        alertValidaciones.innerHTML += "El campo <strong> Mensaje </strong> es requerido <br/>";
+        alertValidaciones.style.display = "block";
         txtMensaje.style.border = "solid thin red";
         isValid = false;
     }
@@ -197,7 +185,8 @@ function validarEnvio() {
 
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
-
+    alertValidaciones.innerHTML = "";
+    alertValidaciones.style.display = "none";
     txtNombre.style.border = "";
     txtEmail.style.border = "";
     txtNumber.style.border = "";
@@ -227,7 +216,10 @@ btnEnviar.addEventListener("click", function (event) {
         txtNumber.value = "";
         txtEmail.value = "";
         txtMensaje.value = "";
-    }  
+    }  else {
+        alertValidaciones.innerHTML += "<strong>ERROR:</strong> El mensaje no ha sido enviado, completa correctamente los campos. <br/>";
+        alertValidaciones.style.display = "block";
+    }
 });
 
 btnClear.addEventListener("click", function (event) {
