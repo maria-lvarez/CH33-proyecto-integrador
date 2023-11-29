@@ -11,6 +11,11 @@
     margin-right: 0.5rem;
     margin-left: 0.5rem;
 }
+
+#palabras:hover{
+    color: rgb(78, 15, 5);
+    transform: scale(1.2);
+}
 /*Manipular la cajita del input de buscar*/
 input.form-control.me-2{
     border-color:#83764C;
@@ -49,11 +54,10 @@ input.form-control.me-2{
 }
 
 /*icono de carrito */
-#carrito, #puertitaCerrada{
+#carrito, #puertitaCerrada, #puertitaAbierta{
     font-size: 2rem;
     color:#83764C;
 }
-
 
 /*Espacio entre los elementos del navbar*/
 #ul-nav li{
@@ -65,7 +69,25 @@ input.form-control.me-2{
     justify-content: end;
 }
 
-
-
+/*este hover es para que se hagan màs grandes y se vean de color magenta*/
+li,#puertitaCerrada, #puertitaAbierta:hover{
+    color: rgb(78, 15, 5);
+    transform: scale(1.2);
+}
+/*estos son para el eecto de barrita de abajo del hover*/
+li:after{
+    content: '';
+    margin: auto;
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: transparent;
+    /* transicion: width 0.5s ,background-color 0.5s; */
+    transition: all 0.8s ease;
+  }
+  li:hover:after{
+    width: 100%;
+    background-color: #8A2F2E;
+  }
 
 
