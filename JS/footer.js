@@ -96,7 +96,7 @@ ul2.append(li35);
 
 let a9 = document.createElement("a");
 a9.classList.add("words-footer");//a9.class = "words-footer";
-a9.href="#";
+a9.href="avisoprivacidad.html";
 a9.innerText = "Avisos de privacidad";
 li35.append(a9);
 
