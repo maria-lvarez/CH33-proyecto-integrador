@@ -14,7 +14,8 @@ body{
   overflow-x: hidden;
 }
 
-html{font-size: 16px;};
+html{
+  font-size: 16px;};
 
 /* #img-funciona{
   min-height: 200px; 
@@ -24,5 +25,12 @@ html{font-size: 16px;};
 
 .titulocarusel{
   font-size: large;
+}
+
+.categoriasCarrusel{
+  font-family:'Montserrat', sans-serif;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
 }
 

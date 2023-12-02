@@ -76,7 +76,7 @@ ul2.append(li33);
 
 let a7 = document.createElement("a");
 a7.classList.add("words-footer"); //a7.class = "words-footer;"
-a7.href="./contacto.html";
+a7.href="contacto.html";
 a7.innerText = "Contáctanos";
 li33.append(a7);
 
@@ -86,7 +86,7 @@ ul2.append(li34);
 
 let a8 = document.createElement("a");
 a8.classList.add("words-footer");//a8.class ="words-footer";
-a8.href="./FAQ.html";
+a8.href="FAQ.html";
 a8.innerText = "FAQ";
 li34.append(a8);
 
