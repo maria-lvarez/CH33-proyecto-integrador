@@ -1,0 +1,38 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+p{
+    text-align: justify;
+}
+#bannerimgpreg{
+    background-image: url("../src/images/bannerFAQ.jpeg");
+    height: 8rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-preg{
+    font-size: 3rem;
+    color: white;
+    -webkit-text-stroke-width: 0.02rem;
+
+}
+
+.tituloFAQ{
+    color: #5E1F28;
+    font-size: 2rem;
+    padding:1rem;
+}
+
+.subtituloFAQ{
+ color: #8A2F2E;
+}
