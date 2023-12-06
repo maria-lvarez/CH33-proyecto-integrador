@@ -74,7 +74,7 @@ li,#puertitaCerrada, #puertitaAbierta:hover{
     color: rgb(78, 15, 5);
     transform: scale(1.2);
 }
-/*estos son para el eecto de barrita de abajo del hover*/
+/*estos son para el efecto de barrita de abajo del hover*/
 li:after{
     content: '';
     margin: auto;
