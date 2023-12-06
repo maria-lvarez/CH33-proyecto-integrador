@@ -82,19 +82,23 @@
  .btn-enviar-izq:hover{
      background-color: #F7BB75;
  }
+ /*para que cuando se agregue una imagen con cloudinary no se haga enorme*/
+#img-product{
+    max-width:45vw;
+ }
 
  /* estilos de imagenes de pie de pagina*/
  img.img-fondo{
      display: block;
-     filter:  brightness(100%) blur(0rem);
+    /* filter:  brightness(100%) blur(0rem);
      height: 20rem;
-     width: 100%;
+     width: 100%;*/
  }
  
- .p-container{
+ /*.p-container{
      position: relative;
      text-align: center;
- }
+ }*/
  /*esta es la posicion del texto dentro de la imagen de pie de pagina*/
  /* .centered{
      position: absolute;
