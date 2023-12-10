@@ -36,7 +36,7 @@ btnIniciarSesion.addEventListener("click", function (event) {
                     let sesion = {status: "active"}
             
                     //Ir almacenando elementos a mi array > Hace que una cadena de texto se vuelva un object
-                    logArray.push((sesion));
+                    logArray[0] = sesion;
                     //Guardar mi arreglo en el local storage
                     localStorage.setItem("logArray", JSON.stringify(logArray));
                     console.log(logArray);
